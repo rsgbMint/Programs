@@ -1,2 +1,2 @@
-# Ejemplo
+# Pruebas
 My first repository
