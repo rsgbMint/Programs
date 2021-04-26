@@ -1,2 +1,2 @@
-# Projects
-Projects I am doing
+# Learning a little of all
+Latex, Python, Git, GNU/Linux, and so on.
