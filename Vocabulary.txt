@@ -1,0 +1,11 @@
+frills: 
+typewriter: escritura
+stress: enfatizar
+encounter: encontrar
+textsf: the sans-serif font
+textttt: the typewriter font for the web address
+stroke: estilo
+serifs: are the LaTeX standard letters, those small decorative details at the end. Serifs are also called Roman fonts.
+lead: guiar
+textrm: the default fot with serifs.
+monospaced (typewriter font): is when every letter of a font has the same width
