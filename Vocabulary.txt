@@ -8,4 +8,20 @@ stroke: estilo
 serifs: are the LaTeX standard letters, those small decorative details at the end. Serifs are also called Roman fonts.
 lead: guiar
 textrm: the default fot with serifs.
-monospaced (typewriter font): is when every letter of a font has the same width
+monospaced (typewriter font): is when every letter of a font has the same width.
+trigger: 
+preceding: anterior
+callback: this will be called when the button is clicked. The callback should be a reference to the function or method.
+bind: vincular
+keystrokes: pulsaciones de teclado
+wrap: pasar, ajustar
+arrange: ordenar, organizar
+so far: hasta ahora
+rather than: en lugar de
+sticky: argument that takes a cardinal direction (N, S, E, or W)
+stick: adherirse
+stretch: estirarse
+span: abarcar
+grid: cuadrícula
+squash: aplastar
+strip: eliminar
