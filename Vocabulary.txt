@@ -1,4 +1,4 @@
-frills: 
+frills: adornos
 typewriter: escritura
 stress: enfatizar
 encounter: encontrar
@@ -9,7 +9,7 @@ serifs: are the LaTeX standard letters, those small decorative details at the en
 lead: guiar
 textrm: the default fot with serifs.
 monospaced (typewriter font): is when every letter of a font has the same width.
-trigger: 
+trigger: hacer funcionar
 preceding: anterior
 callback: this will be called when the button is clicked. The callback should be a reference to the function or method.
 bind: vincular
@@ -25,3 +25,10 @@ span: abarcar
 grid: cuadrícula
 squash: aplastar
 strip: eliminar
+enhance: mejorar 
+drop-down: despegable
+advice: informmación
+arrow: flecha
+consistent: constante
+neat: ordenado
+enforcement: realización 
