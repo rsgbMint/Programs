@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# RC series_circseries_uit module
+# RC series_circuit module
 class rc_series_circuit:
     def __init__(self,r,c):
         self.r = r
