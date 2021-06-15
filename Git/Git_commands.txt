@@ -1,5 +1,5 @@
-to reset the previus commit
+# to reset the previus commit
 $ git commit --amend -m "This is the correct message"
 
-to undo the previus add
+# to undo the previus add
 $ git reset <file> 
