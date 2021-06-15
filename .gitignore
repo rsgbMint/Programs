@@ -12,6 +12,7 @@
 *.tar.gz
 *.rar
 *.workspace
+
 # virtual machine crash logs
 hs_err_pid*
 
