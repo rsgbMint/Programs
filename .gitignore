@@ -1,9 +1,6 @@
 # Compiled class file
 *.class
 
-# Log file
-*.log
-
 # BlueJ files
 *.ctxt
 
@@ -15,6 +12,11 @@
 *.tar.gz
 *.rar
 *.workspace
-
 # virtual machine crash logs
 hs_err_pid*
+
+# Tex files
+*.aux
+*.log
+*.pdf
+*.synctex.gz
