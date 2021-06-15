@@ -32,4 +32,5 @@ arrow: flecha
 consistent: constante
 neat: ordenado
 enforcement: realización
-rely on = confiar 
+rely on = confiar
+strive = esforzarse 
