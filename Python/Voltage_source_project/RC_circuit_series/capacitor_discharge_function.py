@@ -28,6 +28,7 @@ class rc_series_circuit:
         t1,Vc1 = self.rc_series_circuit_charge()
         t2,Vc2 = self.rc_series_circuit_discharge()
         
+        #
         plt.subplot(1,2,1)
         plt.title("Vc vs series_Time")
         plt.ylabel("Capacitor charge (V)")
@@ -43,4 +44,4 @@ class rc_series_circuit:
         plt.grid("on")
         plt.show()
 
-circuit1 = rc_series_circuit(10,0.1)
+circuit1 = rc_series_circuit(100,0.0068)
