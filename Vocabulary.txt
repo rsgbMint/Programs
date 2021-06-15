@@ -31,4 +31,5 @@ advice: informmación
 arrow: flecha
 consistent: constante
 neat: ordenado
-enforcement: realización 
+enforcement: realización
+rely on = confiar 
