@@ -30,16 +30,16 @@ class rc_series_circuit:
         
         #
         plt.subplot(1,2,1)
-        plt.title("Vc vs series_Time")
+        plt.title("Vc vs Time")
         plt.ylabel("Capacitor charge (V)")
-        plt.xlabel("series_Time (s)")
+        plt.xlabel("Time (s)")
         plt.plot(t1,Vc1)
         plt.grid("on")
 
         plt.subplot(1,2,2)
-        plt.title("Vc vs series_Time")
+        plt.title("Vc vs Time")
         plt.ylabel("Capacitor series_discharge (V)")
-        plt.xlabel("series_Time (s)")
+        plt.xlabel("Time (s)")
         plt.plot(t2,Vc2)
         plt.grid("on")
         plt.show()
