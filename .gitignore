@@ -22,7 +22,7 @@ hs_err_pid*
 *.pdf
 *.synctex.gz
 <<<<<<< HEAD
-*.fbd_latexmk
+*.fdb_latexmk
 *.fls
 =======
 
