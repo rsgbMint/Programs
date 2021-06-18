@@ -21,5 +21,11 @@ hs_err_pid*
 *.log
 *.pdf
 *.synctex.gz
+<<<<<<< HEAD
 *.fbd_latexmk
 *.fls
+=======
+
+# vscode files
+*.code-workspace
+>>>>>>> da3b7068e645b01be532a18d7a305a26384c0e4b
