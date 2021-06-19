@@ -3,23 +3,22 @@ import numpy as np
 
 # RC series_circuit module
 class rc_series_circuit:
-    def __init__(self,r,c):
-        self.r = r
-        self.c = c
+    def __init__(self,E=20,r=100,c=0.0068):
+        self.E = E # electromotive force value
+        self.r = r # resistor value
+        self.c = c # capacitor value
         self.output_graph()
         
     def rc_series_circuit_charge(self):
-        # set up the parameter value    
-        E = 20 # electromotive force
+        # set up the parameter value  
         t = np.arange(0, 10, 0.01) # series_time range
-        Vc = E*(1 - np.e**(-t/(self.r*self.c))) # charge function of the capacitor
+        Vc = self.E*(1 - np.e**(-t/(self.r*self.c))) # charge function of the capacitor
 
         return t,Vc
 
     def rc_series_circuit_discharge(self):
-        E = 20 # electromotive force
         t = np.arange(0, 10, 0.01) # series_time range
-        Vc = E*(np.e**(-t/(self.r*self.c))) # series_discharge function of the capacitor
+        Vc = self.E*(np.e**(-t/(self.r*self.c))) # series_discharge function of the capacitor
 
         return t,Vc
     
@@ -27,8 +26,9 @@ class rc_series_circuit:
         # configure the output graph 1
         t1,Vc1 = self.rc_series_circuit_charge()
         t2,Vc2 = self.rc_series_circuit_discharge()
+
         
-        #
+        # rc_siries_circuit_charge plot
         plt.subplot(1,2,1)
         plt.title("Vc vs Time")
         plt.ylabel("Capacitor charge (V)")
@@ -36,6 +36,7 @@ class rc_series_circuit:
         plt.plot(t1,Vc1)
         plt.grid("on")
 
+        # rc_series_circuit_discharge plot
         plt.subplot(1,2,2)
         plt.title("Vc vs Time")
         plt.ylabel("Capacitor series_discharge (V)")
@@ -44,4 +45,4 @@ class rc_series_circuit:
         plt.grid("on")
         plt.show()
 
-circuit1 = rc_series_circuit(100,0.0068)
+circuit1 = rc_series_circuit(20,100,0.001)
