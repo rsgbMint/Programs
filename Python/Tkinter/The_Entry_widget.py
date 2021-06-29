@@ -16,4 +16,6 @@ my_entry.pack()
 
 # To obtain and print the my_entry input value
 print(my_text_var.get())
-tk.mainloop()
+
+# The loop that allows us to see the GUI
+parent.mainloop()
