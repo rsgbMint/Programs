@@ -3,31 +3,35 @@
 
 # Creating a list  
 L = [1, 2, 3]
-
+#############################################################
 # To enter a list by the user
 L = eval(input("Enter a list: "))
 print("The list entered is:", L)
 
+#############################################################
 # Lists can contain all kinds of things, even other lists
 L = [1, 2.718, 'abc', [5, 6, 7]]
 print(L)
 
+#############################################################
 L = [1, 2, 3]
-
 # in-- The in operator tells you if a list contain something
 if 2 in L:
     print('Your list contain the number 2.')
 if 0 not in L:
     print('Your list has no zeros.')
 
+#############################################################
 # For makinf copies of list
 copy = L[:]
 print(copy)
 
-# Looping-- The same two types of loops that work for strings also work for lists.
+# Looping-- The same two types of loops that work for 
+# strings also work for lists.
 for i in range(len(L)):
     print(L[i],end=' ')
 
+#############################################################
 # Example 1
 # Create a program that generate a list of 50 random numbers
 from random import randint
@@ -39,6 +43,7 @@ print(L)
 # Example 2
 num_right = 0
 
+######################################################
 # Question 1
 print('What is the capital of France?', end=' ')
 guess = input()
@@ -62,6 +67,7 @@ else:
 
 print('You have', num_right, 'out of 2 right,')
 
+######################################################
 # Example 2 using dictionaries
 questions = {0: ['What is the capital of France?','paris'],
              1: ['Which state has only one neighbor?','maine']}
@@ -76,3 +82,13 @@ for i in range(len(questions)):
     else:
         print('Wrong. The answer is', questions[i][1])
 print('You have', num_right, 'out of', i+1, 'right.')
+#############################################################
+
+from random import shuffle
+word = input('Enter a word: ')
+
+letter_list = list(word)
+shuffle(letter_list)
+anagram = ''.join(letter_list)
+
+print(anagram)
