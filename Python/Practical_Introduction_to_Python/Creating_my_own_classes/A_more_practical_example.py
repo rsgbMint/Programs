@@ -18,6 +18,7 @@ class Analyzer:
 
 s = 'This is a test of the class'
 analyzer = Analyzer(s)
+
 print(analyzer.words)
 print('Number of words:', analyzer.number_of_words())
 print('Number of words starting with "t":', analyzer.starts_with('t'))
