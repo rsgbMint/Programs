@@ -1,4 +1,4 @@
-# Default arguments neet to come at the end of the
+# Default arguments need to come at the end of the
 # function definition, after all the non-default
 # arguments.
 def multiple_print(string, n=1):
