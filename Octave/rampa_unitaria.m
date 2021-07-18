@@ -10,7 +10,7 @@ m = 1;
 r1 = (t>=0).*t*m;
 
 % Second part
-r2 = (t>=0).*(t-1)*-m;
+r2 = (t>=1).*(t-1)*-m;
 
 % The final function
 rt = r1 + r2;
