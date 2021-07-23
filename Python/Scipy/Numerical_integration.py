@@ -11,7 +11,7 @@ x = np.linspace(a,b, N +1)
 
 # The function
 y = x**2;
-
+ 
 # Are the y-axis values
 y_right = y[1:]
 y_left = y[:-1]
