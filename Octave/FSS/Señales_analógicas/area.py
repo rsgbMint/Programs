@@ -19,4 +19,3 @@ plt.show()
 
 A, e = integrate.quad(rectangular,0,4)
 print(A)
-print(e)
