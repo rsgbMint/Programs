@@ -30,3 +30,6 @@ hs_err_pid*
 *.code-workspace
 *.json
 >>>>>>> da3b7068e645b01be532a18d7a305a26384c0e4b
+
+# C++ resource files
+*.exe
