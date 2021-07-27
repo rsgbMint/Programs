@@ -1,6 +1,6 @@
 class Array:
     """Creating my own arrays"""
-    
+
     def __init__(self, matrix):
         self.matrix = matrix
         self.M = []
@@ -12,3 +12,7 @@ class Array:
             for j in range(len(self.matrix[0])):
                 self.M[i][j] = self.matrix[i][j] + another.matrix[i][j]
         return self.M
+
+if __name__ == '__main__':
+    array = Array([])
+
