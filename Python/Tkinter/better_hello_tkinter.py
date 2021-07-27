@@ -5,6 +5,7 @@ from tkinter import ttk
 # we subclass Tk which will represent our main application object
 class MyApplication(tk.Tk):
     """Hello World Main Application"""
+    
     def __init__(self, *args, **kwargs):
         # we don't need a parent widget this time
         super().__init__(*args, **kwargs)
