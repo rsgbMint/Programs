@@ -1,5 +1,6 @@
 class Array:
-
+    """Creating my own arrays"""
+    
     def __init__(self, matrix):
         self.matrix = matrix
         self.M = []
