@@ -1,21 +1,22 @@
 import tkinter as tk
 from tkinter import ttk
+from typing import Text
 
-# The parent frame
-parent = tk.Tk()
-parent.geometry("200x100")
+class MainApplication(tk.Tk):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.title('The Entry Widget')
+        Entry_widget(self).grid()
 
-# To storage the value entered in my_entry
-my_text_var = tk.StringVar()
 
-# Widget that will be inside of parent frame
-my_entry = ttk.Entry(parent,textvariable=my_text_var)
+class Entry_widget(tk.Frame):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
 
-# To show in the parent frame
-my_entry.pack()
+        my_entry = ttk.Entry(self)
 
-# To obtain and print the my_entry input value
-print(my_text_var.get())
+        my_entry.grid()
 
-# The loop that allows us to see the GUI
-parent.mainloop()
+if __name__ == '__main__':
+    app = MainApplication()
+    app.mainloop()
