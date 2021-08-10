@@ -1,13 +1,11 @@
 import tkinter as tk
 from tkinter import ttk
 
-
 class MainWindow(tk.Tk):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.geometry('300x200')
         Form(self).pack()
-
 
 class Form(tk.Frame):
     def __init__(self, *args, **kwargs):
