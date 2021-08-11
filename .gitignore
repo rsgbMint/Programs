@@ -19,7 +19,6 @@ hs_err_pid*
 # Tex files
 *.aux
 *.log
-*.pdf
 *.synctex.gz
 <<<<<<< HEAD
 *.fdb_latexmk
@@ -33,3 +32,5 @@ hs_err_pid*
 
 # C++ resource files
 *.exe
+
+# images
