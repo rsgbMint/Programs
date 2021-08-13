@@ -1,16 +1,49 @@
 import tkinter as tk
-from tkinter import ttk
+import PyPDF2
+from PIL import Image, ImageTk
+from tkinter.filedialog import askopenfile
 
-class MainWindow(tk.Tk):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        ExtractText(self)
-        self.title('Extract Text')
+root = tk.Tk()
+canvas = tk.Canvas(root, width=600, height=300)
+canvas.grid(columnspan=3)
 
-class ExtractText(tk.Frame):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+#logo
+logo = Image.open('/home/roly/Documents/Git_Repositories/Programs/Python/Tkinter/PDF_Extrac_text/logo.png')
+logo = ImageTk.PhotoImage(logo)
+logo_label = tk.Label(image=logo)
+logo_label.image = logo
+logo_label.grid(row=0, column=1)
 
-if __name__ == '__main__':
-    app = MainWindow()
-    app.mainloop()
+#instructions
+instructions = tk.Label(root, 
+                text="Select a PDF file on your computer to extrac all its text", font="Raleway")
+instructions.grid(row=1, column=0, columnspan=3)
+
+#browse button
+browse_text = tk.StringVar()
+browse_btn = tk.Button(root, textvariable=browse_text, 
+            command= lambda: open_file(), font="Raleway", bg="#20bebe", fg="white", height=2, width=15)
+browse_text.set("Browse")
+browse_btn.grid(row=2, column=1)
+
+canvas = tk.Canvas(root, width=600, height=250)
+canvas.grid(columnspan=3)
+
+def open_file():
+    browse_text.set("loading...")
+    file = askopenfile(parent=root, mode='rb', title="Choose a file", filetypes=[("Pdf file", "*.p")])
+    if file:
+        read_pdf = PyPDF2.PdfFileReader(file)
+        page = read_pdf.getPage(0)
+        page_content = page.extractText()
+
+        #text box
+        text_box = tk.Text(root, height=10, width=50, padx=15, pady=15)
+        text_box.insert(1.0, page_content)
+        text_box.tag_configure("center", justify="center")
+        text_box.tag_add("center", 1.0, "end")
+        text_box.grid(row=3, column=1)
+
+        browse_text.set("Browse")
+
+root.mainloop()
