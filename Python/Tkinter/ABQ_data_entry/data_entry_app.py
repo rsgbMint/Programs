@@ -68,6 +68,8 @@ class LabelInput(tk.Frame):
             self.input.delete(0, tk.END)
             self.input.insert(0, value)
 
+    def grid(self, sticky=(tk.E + tk.W), **kwargs):
+        super().grid(sticky=sticky, **kwargs)
 
 class DatarecordForm(tk.Frame):
     """The input form for our widgets"""
