@@ -24,6 +24,14 @@ hs_err_pid*
 *.fdb_latexmk
 *.fls
 *.pdf
+# Django files
+*.pyc
+asgi.py
+urls.py
+settings.py
+wsgi.py
+db.sqlite3
+manage.py
 
 # vscode files
 *.code-workspace
