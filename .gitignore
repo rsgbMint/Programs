@@ -23,6 +23,7 @@ hs_err_pid*
 *.xdv
 *.fdb_latexmk
 *.fls
+*.pdf
 
 # vscode files
 *.code-workspace
