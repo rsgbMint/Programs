@@ -13,7 +13,6 @@ Zp = rho*(cos(theta) + i*sin(theta))
 % Número complejo en su forma exponencial
 Ze = rho*exp(i*theta)
 
-%%
-% Transformaciones en el plano complejo
-% Primer ejemplo de transformación
-axis
+% Graficar el afijo de un número complejo
+plot(z1, '*r')
+pause
