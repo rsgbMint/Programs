@@ -24,3 +24,13 @@ try:
     linux_interaction()
 except:
     print('Linux function was not executed')
+
+# Example of capture the AssertionError and output that message to screen
+try:
+    linux_interaction()
+except AssertionError as error:
+    # Informs you that the function can only be executed on a Linux machine
+    print(error)
+    # Tells you which function was not executed
+    print('The linux_interaction() function was not executed')
+
