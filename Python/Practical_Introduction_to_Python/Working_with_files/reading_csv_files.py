@@ -22,4 +22,4 @@ with open('csv_file.csv') as f:
 
     # row variable returns a dict wher the keys are the first line or row
     for row in csv_reader:
-        print(type(row))
+        print(row)
