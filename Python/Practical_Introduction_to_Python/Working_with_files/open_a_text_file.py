@@ -13,6 +13,7 @@ except FileNotFoundError as error:
     print(error)
     print('There is no file named data.txt')
 
+# To write in the file
 with open('data.txt', 'w') as f:
     data = 'Some data to be written to the file'
     f.write(data)
