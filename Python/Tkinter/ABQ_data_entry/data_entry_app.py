@@ -117,7 +117,7 @@ class DataRecordForm(tk.Frame):
                                 "Seed sample", input_var=tk.StringVar())
         self.inputs["Seed sample"].grid(row=1, column=2)
 
-        # To place the Record Information Frame in the root
+        # To place the Record Information Frame in the DataRecordForm
         record_infor.grid(row=0, column=0, sticky=tk.W+tk.E)
 
         # Environmet Data field (for Spinbox widget) Label Frame
@@ -148,7 +148,7 @@ class DataRecordForm(tk.Frame):
         self.inputs['Equipment Fault'].grid(
             row=1, column=0, columnspan=3)
 
-        # To place the Environmet Data Frame in the root
+        # To place the Environmet Data Frame in the DataRecordForm
         environment_info.grid(row=1, column=0, sticky=tk.W)
 
         ################# Plant data Label Frame #################
@@ -197,7 +197,7 @@ class DataRecordForm(tk.Frame):
             input_args={"from_": 0, "to": 1000})
         self.inputs['Median Height'].grid(row=1, column=2)
 
-        # To place the Environmet Data Frame in the root
+        # To place the Environmet Data Frame in the DataRecordForm
         plant_info.grid(row=2, column=0, sticky=tk.W)
 
         # Notes section
@@ -206,7 +206,7 @@ class DataRecordForm(tk.Frame):
             input_class=tk.Text,
             input_args={"width": 66, "height": 10})
         
-        # To place the Notes section in the root
+        # To place the Notes section in the DataRecordForm
         self.inputs['Notes'].grid(sticky=tk.W, row=3, column=0)
 
         # To reset our widgets as an empty value
