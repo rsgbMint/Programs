@@ -3,8 +3,8 @@ from tkinter import ttk
 from datetime import datetime
 import os
 import csv
-# Start coding here
 
+# Start coding here
 class LabelInput(tk.Frame):
     """A widget containing a label and input together"""
 
@@ -13,7 +13,7 @@ class LabelInput(tk.Frame):
                  **kwargs):
         super().__init__(parent, **kwargs)
 
-        # To ensure our input_args and label_args are dicts
+        # To ensure our input_args are dicts and label_args.
         input_args = input_args or {}
         label_args = label_args or {}
         self.variable = input_var
@@ -28,7 +28,7 @@ class LabelInput(tk.Frame):
             self.label.grid(row=0, column=0, sticky=(tk.W + tk.E))
             input_args["textvariable"] = input_var
 
-        # Create the input class
+        # Creates the input class
         self.input = input_class(self, **input_args)
         self.input.grid(row=1, column=0, sticky=(tk.W + tk.E))
         
@@ -225,7 +225,7 @@ class DataRecordForm(tk.Frame):
             widget.set('')   
 
 class Application(tk.Tk):
-    """Aplication root window"""
+    """Application root window"""
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -262,9 +262,10 @@ class Application(tk.Tk):
         datestring = datetime.today().strftime("%Y-%m-%d")
         filename = "abq_data_record_{}.csv".format(datestring)
         newfile = not os.path.exists(filename)
-
+        
+        # Obtains the data from class DataRecordForm
         data = self.recordform.get()
-        print(data)
+
         with open(filename, 'a') as fh:
             csvwriter = csv.DictWriter(fh, fieldnames=data.keys())
             if newfile:
