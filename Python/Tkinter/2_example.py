@@ -33,11 +33,12 @@ class Application(tk.Tk):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
+        # Calls the InAndDecrease class 
+        InAndDecrease(self).grid()
+
         # To configure the size of the widgets
         self.rowconfigure(0, minsize=70, weight=1)
         self.columnconfigure([0, 1, 2], minsize=70, weight=1)
-        InAndDecrease(self).grid()
-
 
 if __name__ == '__main__':
     app = Application()
