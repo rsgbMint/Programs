@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{amsmath}
+\parindent = 0mm
+
+\begin{document}
+\title{Práctica	1. \\ Texto normal, párrafo,
+Alineación y gráficos}
+\author{Roly Sandro Gutierrez Benito}
+% \date{} For no date
+\maketitle
+\tableofcontents
+
+\section{Tipos y tamaños de fuente}
+Iniciamos con la segunda práctica de este tutorial, 
+colocando el título, autor y el día. Esta es la primera
+sección donde conoceremos algunos tipos de letras, así
+como los diferentes tamaños de letra que podemos usar.
+
+\begin{itemize}
+\item Tipo de letra \textbf{negrita}
+\item Tipo de letra \textit{itálica}
+\item Tipo de letra \textrm{romana}
+\item Tipo de letra \textsf{sans serif}
+\item Tipo de letra \textsl{inclinada}
+\item Tipo de letra \textsc{Versalitas}
+\end{itemize}
+
+\newpage
+\subsection{Tamaños de letra}
+\begin{itemize}
+\item {\tiny Tamaño} de letra
+\item {\scriptsize Tamaño} de letra
+\item {\footnotesize Tamaño} de letra
+\item {\small Tamaño} de letra
+\item {\normalsize Tamaño} de letra
+\item {\large Tamaño} de letra
+\item {\LARGE Tamaño} de letra
+\item {\huge Tamaño} de letra
+\item {\Huge Tamaño} de letra
+\end{itemize}
+
+\section{Párrafos, sangría y saltos de línea}
+\subsection{Sangría}
+Esta es la primera sección donde conoceremos algunos
+tipos de letras, así como los diferentes tamaños de 
+letra que podemos usar. Y ahora queremos también decidir
+y modificar la sangría en el documento, aquí si iniciamos
+con sagría.\\
+\noindent Pero esta otra línea queremos que no tenga sangría.\\
+Pero esta otra línea queremos que no tenga sangría.\\
+
+\subsection{Salto de línea y nueva página}
+Ahora también queremos decidir y modificar la sagría en el 
+documento, aquí iniciamos con sangría.\\[2mm]
+\par
+Esta línea queremos que tenga un mayor salto de línea.
+
+\subsection{Alineación de párrafos}
+\begin{flushleft}
+	Texto a la izquierda.
+\end{flushleft}
+
+\begin{center}
+	Texto centrado
+\end{center}
+
+\begin{flushright}
+	Texto a la derecha.
+\end{flushright}
+
+\subsection{Comillas y puntos suspensivos}
+Este es un ejemplo: para comillas dobles,
+`simples' y también ``dobles''. Y también los
+puntos suspensivos \dots
+
+\subsection{Espaciado horizontal}
+Inicio \,fin \\[2mm]
+Inicio \quad fin \\[2mm]
+Inicio \qquad fin \\[2mm]
+Inicio \hspace{3cm} fin \\[2mm]
+Inicio \hspace{5cm} fin \\[2mm]
+Inicio \hfill fin \\[2mm]
+
+\subsection{Líneas de relleno}
+Inicio \hrulefill \ fin\\[5mm]
+Inicio \dotfill \ fin
+
+\section{Incluir gráficas externas}
+En \LaTeX podemos incluir figuras externas o 
+generadas directamente en \LaTeX, utilizando algún
+paquete, algunos de los formatos que podemos 
+utilizar son \textbf{.jpg}, \textbf{.png},
+\textbf{.eps} y \textbf{.pdf}.\\[5mm]
+
+Los formatos vectoriales como lo son \textbf{.eps}
+y \textbf{.pdf} son los más recomendados cuando
+hacemos gráficas en las cuales queremos observar
+detalles y presición, porque no pierden calidad al
+aumentar o disminuir su tamaño, y para imágenes en
+general podemos utilizar los formatos \textbf{.jpg}
+o \textbf{.png}.
+
+\section{Paquete graphicx}
+\begin{center}
+\includegraphics[scale=0.5]{figures/image1.eps}
+\end{center}
+
+\begin{itemize}
+\item scale: Escala de la imagen
+\item width: Ancho deseado de la imagen
+\item height: Altura deseada de la imagen en cm.
+\end{itemize}
+
+\begin{center}
+	\includegraphics[width=4cm]{figures/image1.eps}
+\end{center}
+
+\begin{center}
+	\includegraphics[height=5cm]{figures/image1.eps}
+\end{center}
+
+\begin{center}
+	\includegraphics[scale=0.1]{figures/image1.eps} \quad
+	\includegraphics[scale=0.2]{figures/image1.eps} \quad
+	\includegraphics[scale=0.3]{figures/image1.eps} \quad
+	\includegraphics[scale=0.4]{figures/image1.eps} \quad
+\end{center}
+
+\newpage
+\section{Objetos Flotantes}
+Para poder ubicar una imagen en el lugar deseado se tiene
+usar \textbf{!h} y dependiendo la posición que se quiere, se
+puede aumentar: t (top), b (bottom)
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=0.5]{figures/image1.eps}
+	\caption{Imagen a escala 0.5}
+	\label{figure1}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{t}: La imagen en la parte superior: (top)
+\item \textbf{b}: La imagen en la parte inferior: (bottom)
+\item \textbf{h}: La imagen en el lugar que se escribe: (here)
+\end{itemize}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[scale=1]{figures/image1.eps}
+	\caption{Imagen eps}
+	\label{figure2}
+\end{figure}
+
+\newpage
+\subsection{Paquete subfigure}
+\begin{figure}[!ht]
+	\centering
+	\subfigure[Primera figura]
+	{\includegraphics[scale=0.05]{figures/image3.png}}
+	\quad
+	\subfigure[Segunda figura]
+	{\includegraphics[scale=0.05]{figures/image3.png}}
+	\quad
+	\subfigure[Tercera figura]
+	{\includegraphics[scale=0.05]{figures/image3.png}}
+	\caption{Varias figuras}
+	\label{figure3}
+\end{figure}
+Tal como aparece en la Figura\eqref{figure3}. Podemos
+ver la forma en como poner tres imágenes en la misma fila.
+\end{document}
