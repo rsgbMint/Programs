@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%%%%%%%%%%% Preambule %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\usepackage{minted}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usemintedstyle{monokai}
+\parindent = 0mm
+
+\newenvironment{pycode}
+	{\VerbatimEnvironment
+	\begin{minted}[
+	xleftmargin=10pt,
+	linenos=true,
+	mathescape,
+	frame=lines,
+	framesep=2mm,
+	obeytabs=true,
+	tabsize=4,
+	bgcolor=black
+	]{python}}
+	{\end{minted}}
+
+\newcommand{\pyfile}[1]{\inputminted[
+	xleftmargin=10pt,
+	linenos=true, 
+	frame=lines,
+	framesep=2mm,
+	tabsize=4,
+	bgcolor=black
+	]{python}{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%% Document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+ \begin{pycode}
+class Test:
+	def __init__(self, *args, **kwargs):
+		super().__init__(*args, **kwargs)
+		self.geometry("300x200")
+
+	def button():
+		for i in range(10):
+			print("This is just a test")
+
+object1 = Test()
+  \end{pycode}
+
+For a single line of source code, you can alternatively use a 
+shorhand notation: 
+\mint{python}|import this|
+ 
+For \textbf{inline use} we write \verb|\mintinline| use command:
+\mintinline{python}{print(x**2)}. This works!. 
+ 
+For read and format whole files. Its syntax is \verb|\inputminted|:
+\pyfile{hello.py}
+
+Here's another example: we want to use the \LaTeX math mode inside 
+comments:
+
+\begin{pycode}
+# Returns $\displaystyle\sum_{i=1}^{n}i$
+def sum_from_one_to(n):
+	r = range(1, n + 1)
+	return sum(r)
+\end{pycode}
+
+\end{document}
+
