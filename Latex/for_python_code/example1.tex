@@ -14,7 +14,17 @@ Did you know that $2^{65} = \py{2**65}$\ ?
 var = 1 + 1
 for i in range(3):
 	print(i)
+
 print(var)
+\end{pyconsole}
+
+\begin{pyconsole}
+import sympy as sp
+
+s = sp.symbols('s')
+f = sp.Function('f')
+exp = sp.Integral(f(s))
+sp.pprint(exp)
 \end{pyconsole}
 
 \begin{pycode}
