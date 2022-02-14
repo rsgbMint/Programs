@@ -211,7 +211,7 @@ class DataRecordForm(tk.Frame):
 
         # To reset our widgets as an empty value
         self.reset()
- 
+
     # Retrieving data from our form
     def get(self):
         data = {}
