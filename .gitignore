@@ -24,6 +24,11 @@ hs_err_pid*
 *.fdb_latexmk
 *.fls
 *.pdf
+# Pythontex files
+*.pytxcode
+Makefile
+pythontex-files-*
+
 # Django files
 *.pyc
 asgi.py
