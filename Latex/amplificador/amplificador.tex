@@ -1,0 +1,97 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[obeyspaces]{url}
+
+%\usepackage{etoolbox}
+\include{source_code/preamble.tex}
+
+\begin{document}
+\begin{titlepage}
+     \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+     \center
+     \textsc{\LARGE  Universidad Nacional de San \\[0.2cm] Antonio Abad del Cusco}\\[1.5cm]
+	 \includegraphics[scale=0.3]{figures/escudo.jpg}\\[1cm]
+     \textsc{\Large Facultad de Ingeniería Eléctrica, \\Electrónica, Informática y Mecánica}\\[0.5cm]
+     \textsc{\large Escuela Profesional de Ingeniería Electrónica}\\[5mm]
+	 
+	 \HRule \\[0.4cm]
+     { \huge \bfseries CIRCUITOS ELECTRÓNICOS I}\\[1.8mm] 
+	 \HRule\\[5mm]
+     \begin{minipage}{\textwidth}
+        \center
+        \textit{Trabajo final}\\[0.2cm]
+        \text{\large Diseño de un amplificador}\\[3mm]
+		\begin{tabular}{ll}
+        \emph{Docente:} \\[1.8mm]
+            \hspace{1.4cm}\textsc{Ing. Milton Jhon Velasquez Curo}\\[3mm]
+        \emph{Estudiantes:} & \quad \emph{Códigos:}\\[1.8mm]
+            \hspace{1.4cm} \textsc{Roly Sandro Gutierrez Benito} & \hspace{1.7cm} 182967\\[3mm]
+            \hspace{1.4cm} \textsc{Edison Abado Ancco} & \hspace{1.7cm} 145012\\[3mm]
+            \hspace{1.4cm} \textsc{Alberto Arturo Quiñones Pacco}& \hspace{1.7cm} 160901\\[3mm]
+		 \end{tabular} \\[3.5mm]
+		 \textsc{CUSCO-PERÚ}\\
+         \textsc{2022}
+     \end{minipage}
+\end{titlepage}
+\newpage
+\tableofcontents
+
+\newpage
+\section{Diseñar e implementar un amplificador de señales}
+Las características del amplificador de señales son los siguientes:
+\begin{itemize}
+    \item Señal de entrada pico $V_{ip} = 0.1 - 1\ \text{mV}$
+    \item Ganancia de voltaje $A_v = 80\ \text{dB}$
+    \item Impedancia de salida $Z_o = 8\ \Omega$
+    \item Rango de frecuencias $f_l = 40 \text{Hz}$, $f_h = 40\ \text{kHz}$ 
+\end{itemize}
+
+\section{Etapas del amplificador}
+
+\subsection{Preamplificador}
+Para esta etapa, se hizo uso de un amplificador multietapa.
+\begin{itemize}
+    \item \textbf{Primera etapa}
+        \begin{itemize}
+            \item Polarización universal en emisor común.
+            \item Transistor \verb|BC548|
+        \end{itemize}
+
+    \item \textbf{Segunda etapa}
+        \begin{itemize}
+            \item Polarización universal en emisor común.
+            \item Transistor \verb|BC548|
+        \end{itemize}
+\end{itemize}
+
+\subsection{Diseño y cálculos para la primera etapa}
+Dado el siguiente circuito en \textbf{polarización universal} en \textbf{emisor común}:  
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{figures/image1.png}
+    \caption{Primera etapa del preamplificador con polarización universal EC}
+    \label{fig:image1}
+\end{figure}
+\subsubsection{Gráficas del punto de operación}
+\subsubsection{Rectas de carga en DC y AC}
+\subsubsection{Gráfica de Bode}
+\subsubsection{Potencia}
+
+\subsection{Diseño y cálculos para la segunda etapa}
+\subsubsection{Gráficas del punto de operación}
+\subsubsection{Rectas de carga en DC y AC}
+\subsubsection{Gráfica de Bode}
+\subsubsection{Potencia}
+
+\newpage
+\subsection{Amplificador de potencia}
+En esta etapa, se tienen las siguientes características: 
+\begin{itemize}
+    \item Amplificador clase B
+\end{itemize}
+
+\subsubsection{Diseño y cálculos}
+\subsubsection{Gráficas del punto de operación}
+\subsubsection{Rectas de carga en DC y AC}
+\subsubsection{Gráfica de Bode}
+\subsubsection{Potencia}
+\end{document}
