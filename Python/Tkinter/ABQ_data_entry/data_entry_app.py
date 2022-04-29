@@ -31,7 +31,7 @@ class LabelInput(tk.Frame):
         # Creates the input class
         self.input = input_class(self, **input_args)
         self.input.grid(row=1, column=0, sticky=(tk.W + tk.E))
-        
+
         # To configure the grid layout to expand our lone column
         self.columnconfigure(0, weight=1)
 
@@ -73,7 +73,7 @@ class LabelInput(tk.Frame):
 
 class DataRecordForm(tk.Frame):
     """The input form for our widgets"""
-    
+
     def __init__(self, parent, *args, **kwargs):
         super().__init__(parent, *args, **kwargs)
 
@@ -140,7 +140,7 @@ class DataRecordForm(tk.Frame):
             input_class=tk.Spinbox, input_var=tk.DoubleVar(),
             input_args={"from_": 4, "to": 40, "increment": .01})
         self.inputs['Temperature'].grid(row=0, column=2)
-        
+
         self.inputs['Equipment Fault'] = LabelInput(
             environment_info, "Equipment Fault",
             input_class=ttk.Checkbutton,
@@ -205,7 +205,7 @@ class DataRecordForm(tk.Frame):
             self, "Notes",
             input_class=tk.Text,
             input_args={"width": 66, "height": 10})
-        
+
         # To place the Notes section in the DataRecordForm
         self.inputs['Notes'].grid(sticky=tk.W, row=3, column=0)
 
@@ -222,7 +222,7 @@ class DataRecordForm(tk.Frame):
     # Resetting our form
     def reset(self):
         for widget in self.inputs.values():
-            widget.set('')   
+            widget.set('')
 
 class Application(tk.Tk):
     """Application root window"""
@@ -232,8 +232,8 @@ class Application(tk.Tk):
         DataRecordForm(self).reset()
         self.title("ABQ Data Entry Application")
         self.resizable(width=False, height=False)
-        
-        # Adding our application's components 
+
+        # Adding our application's components
         ttk.Label(
             self,
             text="ABQ Data Entry Application",
@@ -247,7 +247,7 @@ class Application(tk.Tk):
         # Adding the save button
         self.savebutton = ttk.Button(self, text="Save",
         command=self.on_save)
-        self.savebutton.grid(sticky=tk.E, row=2, padx=12) 
+        self.savebutton.grid(sticky=tk.E, row=2, padx=12)
 
         # status the status bar label
         self.status = tk.StringVar()
@@ -255,14 +255,14 @@ class Application(tk.Tk):
         self.statusbar.grid(sticky=(tk.W + tk.E), row=3, padx=10)
 
         self.records_saved = 0
-        
+
     def on_save(self):
         """Handles save button clicks"""
 
         datestring = datetime.today().strftime("%Y-%m-%d")
         filename = "abq_data_record_{}.csv".format(datestring)
         newfile = not os.path.exists(filename)
-        
+
         # Obtains the data from class DataRecordForm
         data = self.recordform.get()
 
