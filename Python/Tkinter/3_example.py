@@ -6,11 +6,11 @@ class TemperatureConverter(tk.Frame):
         super().__init__(parent, *args, **kwargs)
 
         # Dicctionary to save the options and measurement units
-        self.convertions = {"Kelvin - Celsius": ["K", "\N{DEGREE CELSIUS}"], 
-                            "Kelvin - Fahrenheit": ["K", "\N{DEGREE FAHRENHEIT}"], 
+        self.convertions = {"Kelvin - Celsius": ["K", "\N{DEGREE CELSIUS}"],
+                            "Kelvin - Fahrenheit": ["K", "\N{DEGREE FAHRENHEIT}"],
                             "Celsius - Kelvin":["\N{DEGREE CELSIUS}", "K"],
                             "Celsius - Fahrenheit": ["\N{DEGREE CELSIUS}", "\N{DEGREE FAHRENHEIT}"],
-                            "Fahrenheit - Kelvin": ["\N{DEGREE FAHRENHEIT}", "K"], 
+                            "Fahrenheit - Kelvin": ["\N{DEGREE FAHRENHEIT}", "K"],
                             "Fahrenheit - Celsius": ["\N{DEGREE FAHRENHEIT}", "\N{DEGREE CELSIUS}"]}
 
         # Creates the variables for the widgets
@@ -19,7 +19,7 @@ class TemperatureConverter(tk.Frame):
         self.variable_entry2 = tk.StringVar()
         self.variable_l1 = tk.StringVar()
         self.variable_l2 =tk.StringVar()
-        
+
         # We create the widgets
         self.option = ttk.Combobox(self, textvariable=self.variable_option)
         self.option["values"] = list(self.convertions.keys())
@@ -29,7 +29,7 @@ class TemperatureConverter(tk.Frame):
                                      command=self.converter)
         self.entry2 = ttk.Entry(self, textvariable=self.variable_entry2)
         self.label2 = ttk.Label(self, textvariable=self.variable_l2)
-        
+
         # Gives a functionality when the combobox is selected
         self.option.bind("<<ComboboxSelected>>", self.callback)
 
@@ -42,7 +42,7 @@ class TemperatureConverter(tk.Frame):
         self.label2.grid(row=0, column=5)
 
     # The function is called when the comobobox widget is selected
-    def callback(self, event):        
+    def callback(self, event):
         self.convertion_keys = list(self.convertions.keys())
         self.convertion_values = list(self.convertions.values())
 
@@ -77,7 +77,7 @@ class TemperatureConverter(tk.Frame):
         else:
             self.variable_l1.set(self.convertion_values[6][0])
             self.variable_l2.set(self.convertion_values[6][1])
-        
+
     # Method to convert temperature scales
     def converter(self):
         # Not to add to the output
@@ -113,7 +113,7 @@ class Application(tk.Tk):
         super().__init__(*args, **kwargs)
 
         self.title("Temperature Converter")
-        
+
         TemperatureConverter(self).grid()
 
         # To configure the size of the widgets
