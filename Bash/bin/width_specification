@@ -1,0 +1,1 @@
+printf "#:%s %10s:\n" "Title" width_specification Author "Roly S.G.B <182967@unsaac.edu.pe>" Version 1.0 Description 

@@ -1,0 +1,44 @@
+#: Description: print Hello and the first comman-line argument
+#: S1         : for the first argument 
+#: printf      : <format> <argument> ...
+
+printf "Hello, %s %s!\n" "$1"
+
+#: Description: Escape secuences in printf
+#: \a  : Alert (bell)
+#: \b  : Backspace 
+#: \e  : Escape character
+#: \f  : Form feed
+#: \n  : Newline
+#: \r  : CArriage return
+#: \t  : Horizontal tab
+#: \v  : Vertical tab
+#: \\  : Baskslash
+#: \nnn: A character specified by one to three octal digits
+#: \xHH: A character specified by one or two hexadecimal digits 
+
+printf "Q\ta\n\x42\n"
+
+#: Description: Format specifiers in printf
+#: %s         : prints the literal characters in the argument
+printf "\n%s" "%s:" "Print arguments on" "Separate lines"
+
+#: %b         : is like %s except that escape sequences in the arguments are translated
+printf "\n%b" "\n%b:" "Hello\nworld" "12\tword\n\n"
+
+#: %d         : printing integers
+printf "%s\n" "%d:"
+printf "%d\n" 23 45 56 0xff 011
+
+#: %f         : printing decimal fractions or floating-pont numbers
+printf "\n%s" %f:
+printf "\n%f" 12.34 23 56.789 1.2345678
+printf "\n"
+
+#: %e        : for representing in exponential notation
+printf "\n%s" %f:
+printf "\n%e" 12.34 23 56.789 1.2345678
+printf "\n"
+
+#: %x        : integers printed in hexadecimal
+printf "color : #%02x%02x%02x;\n" 65 105 225

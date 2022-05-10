@@ -1,0 +1,9 @@
+#!/bin/bash
+#: Title       : hw
+#: Date        : 2022-05-04
+#: Author      : "Roly S.G.B" <182967@unsaac.edu.pe>
+#: Version     : 1.0
+#: Description : print Hello, World!
+#: Options     : None
+
+printf "%s\n" "Hello, World !"
