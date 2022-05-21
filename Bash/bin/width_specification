@@ -1,1 +1,10 @@
-printf "#:%s %10s:\n" "Title" width_specification Author "Roly S.G.B <182967@unsaac.edu.pe>" Version 1.0 Description 
+#: The argument will be printed flush right in a fiend of that width or will be flush left if the number is negative
+printf "#:%-12s: %-34s:\n" "Title" width_specification Author "Roly S.G.B <182967@unsaac.edu.pe>" Version 1.0 Description 
+
+#: If the width specification is preceded by a 0, the numbers are padded with leading zeroes to fill the width
+printf "%s\n"
+printf "%04d\n" 12 23 56 123 255
+
+#:A width specifier with a decimal fraction specifies the precision of a floating-point number or the maximum width of a string:
+printf "%s\n"
+printf "%12.4s %9.2f\n" Jhon 2 Jackson 4.579 Walter 2.9
