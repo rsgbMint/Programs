@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.18}
+
+\begin{document}
+	\begin{figure}
+		\centering
+		\begin{tikzpicture}[scale=1.20]
+			\begin{axis}[xmin=-5, xmax=5, ymin=-5, ymax=5,
+				axis x line=center, axis y line=center, 
+				xlabel=$x$, ylabel=$y$, 
+				xlabel style={at={(ticklabel* cs:1.05)}},
+				ylabel style={at={(ticklabel* cs:1.05)}}]
+
+				\addplot[red!80!white, thick,
+					samples=200, domain=-3:3]{x^4-0.5*x^3-2*x^2-x+1};
+				\node at (axis cs:3,3){$p(x)$};
+			\end{axis}
+		\end{tikzpicture}
+	\caption{Function $f(x) = x^4-0.5x^3-2x^2-x+1$}
+	\label{}
+	\end{figure}
+\end{document}
