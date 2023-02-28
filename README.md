@@ -2,4 +2,4 @@
 Latex, Python, Git, GNU/Linux, and so on. You can find examples in different kind of Programming Languages and 
 the HyperText Markup Language. <br>
 
-It is just for learning proposes
+It is just for <b>learning proposes</b>.
