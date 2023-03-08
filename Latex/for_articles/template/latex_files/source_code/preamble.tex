@@ -1,0 +1,80 @@
+\documentclass[a4paper, 12pt]{article}
+\AddToHook{cmd/section/before}{\clearpage} % Each section in a newpage
+% \usepackage[nottoc]{tocbibind} % For bibliography on the toc
+\usepackage{pythontex}
+\usepackage[dvipsnames]{xcolor}
+% ------ begin minted configuration ----------------
+\usepackage{minted}
+% \usepackage{etoolbox}
+% \BeforeBeginEnvironment{minted}{\begin{tcolorbox}}%
+% \AfterEndEnvironment{minted}{\end{tcolorbox}}%
+% ------ end minted configuration ------------------
+\usepackage[dvipsnames]{xcolor}
+\usepackage[most]{tcolorbox}
+\usepackage{tgbonum} % font for all the document
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{pdfpages}
+\decimalpoint
+\usepackage{bold-extra}
+\usepackage{schemata} % To use schemas {}
+\usepackage{amssymb,amsmath}
+\usepackage{cancel} % Cancel terms in an equation
+\usepackage{rsfso} % Reluctance
+\usepackage{bm} % To make bold math expresions
+\usepackage{pifont} % more styles for bullets
+\usepackage{enumitem} % customize the bullet's items
+\usepackage[titles]{tocloft} % Formatting titles like sections, subsection, and so on.
+\setlength{\cftbeforesubsecskip}{10pt} % Top space for toc's subsections
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{titlesec} % To seting the title for all the pages
+\usepackage[colorlinks=true, linkcolor=red, citecolor=red]
+{hyperref}
+\usepackage{float}
+\usepackage{parskip} % To make the break lines for all the doc
+\usepackage[caption = false]{subfig}
+\usepackage[total={18cm,25cm},top=2cm, left=2cm]{geometry}
+\hypersetup{linktoc=all} % Set the toc regarding the previous conf
+
+% My own commands
+% Personal information
+\renewcommand{\title}[2]{\begin{center}{#2\textsc{#1}}\end{center}}
+\renewcommand{\author}[1]{\begin{center}#1\end{center}}
+\renewcommand{\year}[2]{\begin{center}\vspace{#2} #1\end{center}}
+% ToC configuration
+\addto\captionsspanish{\renewcommand\contentsname{Tabla de contenidos}}
+\renewcommand{\contentsname}{Contenido}
+\renewcommand{\cftsecleader}{\color{red}\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\color{red}\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsubsecleader}{\color{red}\cftdotfill{\cftdotsep}}
+\newcommand{\HRule}{\rule{15cm}{0.5mm}}
+\renewcommand{\refname}{Referencias}
+\DeclareUrlCommand\url{\color{blue}} % Set the url to blue color
+
+% Formating the section
+\setcounter{section}{0}
+\titleformat
+{\section} % command
+[display] % shape
+{\Huge\bfseries\sc} % format
+{} % label
+{-12mm} % sep
+{
+	\color{darkgray!60}{
+	\rule{\textwidth}{1.2pt}}
+	\centering
+} % before-code
+[	
+	\vspace{-7mm}
+	\rule{\textwidth}{1.2pt}
+] % after-code
+
+% Formatting the subsection
+\titleformat{\subsection}[display]
+{\Large\bfseries\scshape}{}{-10mm}{}
+
+% Formatting the subsubsection
+\titleformat{\subsubsection}[display]
+{\large\bfseries\scshape}{}{-10mm}{}
