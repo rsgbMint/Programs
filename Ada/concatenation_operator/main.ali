@@ -1,0 +1,60 @@
+V "GNAT Lib v12"
+M P W=b
+P ZX
+
+RN
+RV NO_IO
+RV NO_DYNAMIC_SIZED_OBJECTS
+
+U main%b		main.adb		429532c4 NE OO SU
+W ada%s			ada.ads			ada.ali
+Z ada.strings.text_buffers%s  a-sttebu.adb	a-sttebu.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.img_int%s	s-imgint.ads		s-imgint.ali
+
+D ada.ads		20220820011231 76789da1 ada%s
+D a-except.ads		20220820011231 2a7d8d70 ada.exceptions%s
+D a-ioexce.ads		20220820011231 40018c65 ada.io_exceptions%s
+D a-stream.ads		20220820011231 119b8fb3 ada.streams%s
+D a-string.ads		20220820011231 90ac6797 ada.strings%s
+D a-sttebu.ads		20220820011231 18209c64 ada.strings.text_buffers%s
+D a-stuten.ads		20220820011231 33c54060 ada.strings.utf_encoding%s
+D a-tags.ads		20220820011231 9eaa38c6 ada.tags%s
+D a-textio.ads		20220820011231 deada98a ada.text_io%s
+D a-unccon.ads		20220820011231 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20220820011231 edec285f interfaces%s
+D i-cstrea.ads		20220820011231 e53d8b8e interfaces.c_streams%s
+D main.adb		20230108063901 9c389b4e main%b
+D system.ads		20220820011231 a2da961d system%s
+D s-conca2.ads		20220820011231 3d460502 system.concat_2%s
+D s-conca3.ads		20220820011231 9078e860 system.concat_3%s
+D s-crtl.ads		20220820011231 8a0692f8 system.crtl%s
+D s-exctab.ads		20220820011231 91bef6ef system.exception_table%s
+D s-ficobl.ads		20220820011231 dc5161d4 system.file_control_block%s
+D s-imagei.ads		20220820011231 0d3f86a7 system.image_i%s
+D s-imgint.ads		20220820011231 bdb6f5ec system.img_int%s
+D s-parame.ads		20220820011231 d494a4a6 system.parameters%s
+D s-putima.ads		20220820011231 4e095881 system.put_images%s
+D s-secsta.ads		20220820011231 62cd9202 system.secondary_stack%s
+D s-soflin.ads		20220820011231 df77073e system.soft_links%s
+D s-stache.ads		20220820011231 0b81c1fe system.stack_checking%s
+D s-stalib.ads		20220820011231 1c9580f6 system.standard_library%s
+D s-stoele.ads		20220820011231 6d8e1ff4 system.storage_elements%s
+D s-stoele.adb		20220820011231 8f5a9db6 system.storage_elements%b
+D s-traent.ads		20220820011231 c81cbf8c system.traceback_entries%s
+D s-unstyp.ads		20220820011231 fa2a7f59 system.unsigned_types%s
+D s-wchcon.ads		20220820011231 d9032363 system.wch_con%s
+D unchconv.ads		20220820011231 ca2f9e18 unchecked_conversion%s
+G a e
+G c Z b b [main standard 4 11 none]
+X 1 ada.ads
+16K9*Ada 20e8 13|1r6 2r5
+X 9 a-textio.ads
+58K13*Text_IO 727e16 13|1w10 2r9
+507U14*Put_Line 13|7s3 8s3 10s3
+X 13 main.adb
+4U11*Main 4b11 11l5 11t9
+5a9 name{string} 10r24
+
