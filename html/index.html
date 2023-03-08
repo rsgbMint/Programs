@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<title>Portada HTML</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+		}
+		
+		header img {
+			max-width: 100%;
+		}
+		
+		nav {
+			background-color: #f2f2f2;
+			padding: 10px;
+			text-align: center;
+		}
+		
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		nav li {
+			display: inline-block;
+			margin: 0 10px;
+		}
+		
+		nav a {
+			color: #333;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		
+		nav a:hover {
+			color: #666;
+		}
+		
+		section {
+			padding: 20px;
+			display: none; /* Oculta todas las secciones */
+		}
+		
+		section h2 {
+			color: #333;
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+		
+		section p {
+			color: #666;
+			font-size: 16px;
+			line-height: 1.5;
+		}
+		
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+		
+		/* Mostrar solo la sección activa */
+		section:target {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Título de la portada</h1>
+		<img src="imagen.jpg" alt="Descripción de la imagen">
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="#inicio">Inicio</a></li>
+			<li><a href="#acerca-de">Acerca de</a></li>
+			<li><a href="#contactanos">Contáctanos</a></li>
+		</ul>
+	</nav>
+	
+	<section id="inicio">
+		<h2>Inicio</h2>
+		<p>Bienvenido a nuestro sitio web.</p>
+	</section>
+	
+	<section id="acerca-de">
+		<h2>Acerca de</h2>
+		<p>En esta sección puedes incluir información sobre tu empresa o proyecto.</p>
+	</section>
+	
+	<section id="contactanos">
+		<h2>Contáctanos</h2>
+		<p>En esta sección puedes incluir un formulario de contacto o información de contacto como un correo electrónico o número de teléfono.</p>
+	</section>
+	
+	<footer>
+		<p>Derechos de autor 2023.</p>
+	</footer>
+</body>
+</html>
+

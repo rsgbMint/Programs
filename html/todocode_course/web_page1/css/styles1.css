@@ -1,0 +1,17 @@
+* {
+	color: red;
+	font-family: arial;
+}
+
+li {
+	color: blue;
+}
+
+.textoimportante {
+	color: black;
+}
+
+#poo {
+	color: green;
+	font-weight: bold;
+}
