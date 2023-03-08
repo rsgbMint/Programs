@@ -1,0 +1,33 @@
+\documentclass[a4paper, 12pt]{book}
+\AddToHook{cmd/section/before}{\clearpage} % Each section in a new line
+\usepackage[dvipsnames]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{pdfpages}
+\decimalpoint
+\usepackage{schemata} % To use schemes like {}
+\usepackage{amssymb, amsmath}
+\usepackage{cancel} % Ways of show cancel terms
+\usepackage{rsfso} % Reluctance symbol
+\usepackage{bm} % To make bold math expresions
+\usepackage{pifont} % More styles for bullets 
+\usepackage{enumitem} % Customize the bullet's item
+\usepackage[titles]{tocloft} % Formatting titles like sectiones, subsection, and so on.
+\setlength{\cftbeforesubsecskip}{14pt} % Top space for toc's subsectiones
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{titlesec}
+\usepackage[colorlinks=true, linkcolor=red, citecolor=red]{hyperref}
+\usepackage{float}
+\usepackage{parskip} % To make the break lines for all the document
+\usepackage[caption = false]{subfig}
+\usepackage[total={18cm,25cm}, top=2cm, left=2cm]{geometry}
+\hypersetup{linktoc=all} % Set the toc regarding the previous conf
+
+% My own commands
+\renewcommand{\title}[2]{\begin{center}{#2\textsc{#1}}\end{center}}
+\renewcommand{\author}[1]{\begin{center}#1\end{center}}
+\renewcommand{\year}[2]{\begin{center}\vspace{#2} #1\end{center}}
+\begin{document}
+\end{document}
