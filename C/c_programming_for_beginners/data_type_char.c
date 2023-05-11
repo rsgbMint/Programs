@@ -6,6 +6,5 @@ int main(){
 
 	// The ASCII equivalent of 'z'
 	printf("%d\n", character);
-
 	return 0;
 }
