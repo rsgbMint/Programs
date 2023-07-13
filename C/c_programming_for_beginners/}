@@ -1,8 +1,0 @@
-#include <stdio.h>
-
-int main(){
-	char character = 'z';
-	printf("%c\n", character);
-
-	return 0;
-}
