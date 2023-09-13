@@ -1,0 +1,95 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.vga_pkg.all;
+use work.dcse_pkg.all;
+
+entity sincro_vga is
+	port(
+		clk, rst	: in std_logic;
+		pxl_num		: out unsigned(c_nb_pxls - 1 downto 0);
+		line_num	: out unsigned(c_nb_lines - 1 downto 0);
+		visible		: out std_logic;
+		hsynch		: out std_logic;
+		vsynch		: out std_logic;
+		pxl_clk		: out std_logic;
+		comp_synch	: out std_logic
+	);
+end sincro_vga;
+
+architecture behavioral of sincro_vga is
+signal cont_clk	: natural range 0 to 1 := 0;
+signal cont_pxl	: natural range 0 to 800 := 0;
+signal cont_line: natural range 0 to 520 := 0;
+signal clk_aux	: std_logic := '0';
+signal new_pxl	: std_logic := '0'; 
+signal visible_pxl, visible_line : std_logic;
+
+begin
+	hsynch <= '1';
+	vsynch <= '1';
+
+	P_cont_clk: process (clk, rst) 
+	begin
+		if rising_edge(clk) then
+			cont_clk <= cont_clk + 1;
+			if cont_clk = 1 then 
+				clk_aux <= not clk_aux;
+				cont_clk <= 0;
+			end if;
+		end if;
+	end process;
+	new_pxl <= cont_clk;
+	pxl_clk <= clk_aux;
+
+	P_cont_pxl: process (clk, rst)
+	begin
+		if new_pxl = 1 then
+			cont_pxl <= cont_pxl + 1;
+			if cont_pxl < 800 then
+				if cont_pxl < 640 then
+					visible_pxl <= '1';
+				else
+					if cont_pxl > 656 then
+						hsynch <= '0';			
+						if cont_plx > 752 then
+							hsynch <= '1';
+						end if;
+					visible_pxl <= '0';
+					cont_pxl = 0;
+					end if;
+				end if;
+			else
+				new_line <= '1';
+			end if;
+		end if;
+	end process;
+	pxl_num <= cont_pxl;
+
+	P_cont_line: process (clk, rst)
+	begin
+		if new_line = '1' then 
+			cont_line <= cont_line + 1;
+			if cont_line < 520 then
+				if cont_line < 480 then
+					visible_line <= '1';
+				else
+					if cont_line > 489 then
+						vsynch <= '0';
+						if cont_line > 491 then
+							vsync <= '1';
+						end if;
+					visible_line <= '0';
+				end if;
+			else
+				new_line <= '0';
+			end if;
+		end if;
+	end process;
+	line_num <= cont_line;
+	visible <= visible_pxl and visible_line;
+	
+end architecture;
+
+		
+

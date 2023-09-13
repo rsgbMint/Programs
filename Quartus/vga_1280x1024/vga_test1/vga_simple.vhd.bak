@@ -1,0 +1,13 @@
+entity vga_simple is
+begin
+	(
+		clk, reset : in std_logic;
+		R : out std_logic_vector();
+		G : out std_logic_vector();
+		B : out std_logic_vector();
+		VGA_BLANK 	: out std_logic;
+		VGA_CLK		: out std_logic;
+		VGA_HS		: out std_logic;
+		VGA_VS		: out std_logic
+	);
+	

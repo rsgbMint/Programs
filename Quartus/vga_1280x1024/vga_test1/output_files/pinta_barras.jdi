@@ -1,0 +1,16 @@
+<sld_project_info>
+  <project>
+    <hash md5_digest_80b="78884d2f7eaddd4a90cf"/>
+  </project>
+  <file_info>
+    <file device="EP2C35F672C6" path="pinta_barras.sof" usercode="0xFFFFFFFF"/>
+  </file_info>
+  <sld_infos>
+    <sld_info hpath="PLL:blique3" name="blique3">
+      <assignment_values>
+        <assignment_value text="QSYS_NAME PLL HAS_SOPCINFO 1 GENERATION_ID 1694581255"/>
+      </assignment_values>
+      <parameters/>
+    </sld_info>
+  </sld_infos>
+</sld_project_info>

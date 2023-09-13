@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="30" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="350" />
+   <clocksource preferredWidth="350" />
+   <frequency preferredWidth="330" />
+  </columns>
+ </clocktable>
+ <library expandedCategories="Project,Library,Library/Merlin Components" />
+ <window width="1336" height="683" x="15" y="70" />
+ <generation synthesis="VHDL" />
+ <hdlexample language="VHDL" />
+</preferences>

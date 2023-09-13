@@ -1,0 +1,41 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+library work;
+use work.dcse_pkg.all;
+
+package vga_pkg is
+	-- Horizonal pixels
+	constant c_pxl_visible	: natural := 640;
+	constant c_pxl_fporch   : natural := 16;
+	constant c_pxl_2_fporch : natural := c_pxl_visible + c_pxl_fporch;
+	constant c_pxl_synch	: natural := 96;
+	constant c_pxl_2_synch  : natural := c_pxl_2_fporch + c_pxl_synch;
+	constant c_pxl_total	: natural := 800;
+	constant c_pxl_bporch	: natural := c_pxl_total - c_pxl_2_synch;
+
+	-- Vertical lines
+	constant c_line_visible		: natural := 480;
+	constant c_line_fporch		: natural := 9;
+	constant c_line_2_fporch	: natural := c_line_visible + c_line_fporch;
+	constant c_line_synch		: natural := 2;
+	constant c_line_2_synch		: natural := c_line_2_fporch + c_line_synch;
+	constant c_line_total		: natural := 520;
+	constant c_line_bporch		: natural := c_line_total - c_line_2_synch;
+
+	constant c_nb_pxls	: natural := log2i(c_pxl_total-1) + 1;
+	constant c_np_lines : natural := log2i(c_line_total-1) + 1;
+
+	-- bit numbers for each color (RGB)
+	constant c_nb_red	: natural := 10;
+	constant c_nb_green : natural := 10;
+	constant c_nb_blue	: natural := 10;
+
+	-- VGA frecuency: 25MHz
+	constant c_freq_vga	: natural := 25*10**6;
+
+	-- High level of the syncronization
+	constant c_synch_act: std_logic := '0';
+end vga_pkg;
+
