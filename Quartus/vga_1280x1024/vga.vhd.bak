@@ -1,0 +1,32 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity vga is
+	port
+	(
+	clock_24			: in std_logic_vector(1 downto 0);
+	VGA_HS, VGA_VS		: out std_logic;
+	VGA_R, VGA_G, VGA_B : out std_logic_vector(9 downto 0)
+	);
+end vga;
+
+architecture main of vga is
+	component sync is
+	port
+	(
+		clk : in std_logic;
+		HSYNC, VSYNC : out std_logic;
+		R, G, B : out std_logic_vector(9 downto 0)
+	);
+	end component sync;
+
+begin
+	C1: sync port map (VGACLK, VGA_HS, VGA_VS, VGA_R, VGA_G, VGA_B);
+	
+
+
+end main;
+
+
+
