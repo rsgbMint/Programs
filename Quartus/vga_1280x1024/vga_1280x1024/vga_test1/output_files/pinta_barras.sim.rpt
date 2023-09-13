@@ -1,0 +1,774 @@
+Simulator report for pinta_barras
+Wed Sep 13 03:33:40 2023
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 505 nodes    ;
+; Simulation Coverage         ;      84.55 % ;
+; Total Number of Transitions ; 4247887      ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                         ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                       ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                    ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                          ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                           ;               ;
+; Vector input source                                                                        ; /home/roly/Documents/FPGA/VHDL/Quartus/vga_test1/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                            ; On            ;
+; Check outputs                                                                              ; Off                                                           ; Off           ;
+; Report simulation coverage                                                                 ; On                                                            ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                            ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                            ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                            ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                           ; Off           ;
+; Detect glitches                                                                            ; Off                                                           ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                           ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                           ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                           ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                           ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                            ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                    ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                           ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                           ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                          ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 32-bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      84.55 % ;
+; Total nodes checked                                 ; 505          ;
+; Total output ports checked                          ; 505          ;
+; Total output ports with complete 1/0-value coverage ; 427          ;
+; Total output ports with no 1/0-value coverage       ; 73           ;
+; Total output ports with no 1-value coverage         ; 74           ;
+; Total output ports with no 0-value coverage         ; 77           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+
+; Node Name                                                                  ; Output Port Name                                                           ; Output Port Type ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+
+; |vga_simple|clk                                                            ; |vga_simple|clk                                                            ; out              ;
+; |vga_simple|R[0]                                                           ; |vga_simple|R[0]                                                           ; pin_out          ;
+; |vga_simple|R[1]                                                           ; |vga_simple|R[1]                                                           ; pin_out          ;
+; |vga_simple|R[2]                                                           ; |vga_simple|R[2]                                                           ; pin_out          ;
+; |vga_simple|R[3]                                                           ; |vga_simple|R[3]                                                           ; pin_out          ;
+; |vga_simple|R[4]                                                           ; |vga_simple|R[4]                                                           ; pin_out          ;
+; |vga_simple|R[5]                                                           ; |vga_simple|R[5]                                                           ; pin_out          ;
+; |vga_simple|R[6]                                                           ; |vga_simple|R[6]                                                           ; pin_out          ;
+; |vga_simple|R[7]                                                           ; |vga_simple|R[7]                                                           ; pin_out          ;
+; |vga_simple|R[8]                                                           ; |vga_simple|R[8]                                                           ; pin_out          ;
+; |vga_simple|R[9]                                                           ; |vga_simple|R[9]                                                           ; pin_out          ;
+; |vga_simple|G[0]                                                           ; |vga_simple|G[0]                                                           ; pin_out          ;
+; |vga_simple|G[1]                                                           ; |vga_simple|G[1]                                                           ; pin_out          ;
+; |vga_simple|G[2]                                                           ; |vga_simple|G[2]                                                           ; pin_out          ;
+; |vga_simple|G[3]                                                           ; |vga_simple|G[3]                                                           ; pin_out          ;
+; |vga_simple|G[4]                                                           ; |vga_simple|G[4]                                                           ; pin_out          ;
+; |vga_simple|G[5]                                                           ; |vga_simple|G[5]                                                           ; pin_out          ;
+; |vga_simple|G[6]                                                           ; |vga_simple|G[6]                                                           ; pin_out          ;
+; |vga_simple|G[7]                                                           ; |vga_simple|G[7]                                                           ; pin_out          ;
+; |vga_simple|G[8]                                                           ; |vga_simple|G[8]                                                           ; pin_out          ;
+; |vga_simple|G[9]                                                           ; |vga_simple|G[9]                                                           ; pin_out          ;
+; |vga_simple|B[0]                                                           ; |vga_simple|B[0]                                                           ; pin_out          ;
+; |vga_simple|B[1]                                                           ; |vga_simple|B[1]                                                           ; pin_out          ;
+; |vga_simple|B[2]                                                           ; |vga_simple|B[2]                                                           ; pin_out          ;
+; |vga_simple|B[3]                                                           ; |vga_simple|B[3]                                                           ; pin_out          ;
+; |vga_simple|B[4]                                                           ; |vga_simple|B[4]                                                           ; pin_out          ;
+; |vga_simple|B[5]                                                           ; |vga_simple|B[5]                                                           ; pin_out          ;
+; |vga_simple|B[6]                                                           ; |vga_simple|B[6]                                                           ; pin_out          ;
+; |vga_simple|B[7]                                                           ; |vga_simple|B[7]                                                           ; pin_out          ;
+; |vga_simple|B[8]                                                           ; |vga_simple|B[8]                                                           ; pin_out          ;
+; |vga_simple|B[9]                                                           ; |vga_simple|B[9]                                                           ; pin_out          ;
+; |vga_simple|VGA_BLANK                                                      ; |vga_simple|VGA_BLANK                                                      ; pin_out          ;
+; |vga_simple|VGA_CLK                                                        ; |vga_simple|VGA_CLK                                                        ; pin_out          ;
+; |vga_simple|VGA_HS                                                         ; |vga_simple|VGA_HS                                                         ; pin_out          ;
+; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|altpll:sd1|cycloneii_pll:pll ; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|altpll:sd1|cycloneii_pll:pll ; clk              ;
+; |vga_simple|pinta_barras:bloque2|P_pinta~0                                 ; |vga_simple|pinta_barras:bloque2|P_pinta~0                                 ; out0             ;
+; |vga_simple|pinta_barras:bloque2|P_pinta~1                                 ; |vga_simple|pinta_barras:bloque2|P_pinta~1                                 ; out0             ;
+; |vga_simple|pinta_barras:bloque2|P_pinta~2                                 ; |vga_simple|pinta_barras:bloque2|P_pinta~2                                 ; out0             ;
+; |vga_simple|pinta_barras:bloque2|green~0                                   ; |vga_simple|pinta_barras:bloque2|green~0                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~1                                   ; |vga_simple|pinta_barras:bloque2|green~1                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~2                                   ; |vga_simple|pinta_barras:bloque2|green~2                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~3                                   ; |vga_simple|pinta_barras:bloque2|green~3                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~4                                   ; |vga_simple|pinta_barras:bloque2|green~4                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~5                                   ; |vga_simple|pinta_barras:bloque2|green~5                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~6                                   ; |vga_simple|pinta_barras:bloque2|green~6                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~7                                   ; |vga_simple|pinta_barras:bloque2|green~7                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~8                                   ; |vga_simple|pinta_barras:bloque2|green~8                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~9                                   ; |vga_simple|pinta_barras:bloque2|green~9                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~0                                    ; |vga_simple|pinta_barras:bloque2|blue~0                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~1                                    ; |vga_simple|pinta_barras:bloque2|blue~1                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~2                                    ; |vga_simple|pinta_barras:bloque2|blue~2                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~3                                    ; |vga_simple|pinta_barras:bloque2|blue~3                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~4                                    ; |vga_simple|pinta_barras:bloque2|blue~4                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~5                                    ; |vga_simple|pinta_barras:bloque2|blue~5                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~6                                    ; |vga_simple|pinta_barras:bloque2|blue~6                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~7                                    ; |vga_simple|pinta_barras:bloque2|blue~7                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~0                                     ; |vga_simple|pinta_barras:bloque2|red~0                                     ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~1                                     ; |vga_simple|pinta_barras:bloque2|red~1                                     ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~2                                     ; |vga_simple|pinta_barras:bloque2|red~2                                     ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~3                                     ; |vga_simple|pinta_barras:bloque2|red~3                                     ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~4                                     ; |vga_simple|pinta_barras:bloque2|red~4                                     ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~5                                     ; |vga_simple|pinta_barras:bloque2|red~5                                     ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~6                                     ; |vga_simple|pinta_barras:bloque2|red~6                                     ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~7                                     ; |vga_simple|pinta_barras:bloque2|red~7                                     ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~8                                     ; |vga_simple|pinta_barras:bloque2|red~8                                     ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~9                                     ; |vga_simple|pinta_barras:bloque2|red~9                                     ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~10                                  ; |vga_simple|pinta_barras:bloque2|green~10                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~11                                  ; |vga_simple|pinta_barras:bloque2|green~11                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~12                                  ; |vga_simple|pinta_barras:bloque2|green~12                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~13                                  ; |vga_simple|pinta_barras:bloque2|green~13                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~14                                  ; |vga_simple|pinta_barras:bloque2|green~14                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~15                                  ; |vga_simple|pinta_barras:bloque2|green~15                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~16                                  ; |vga_simple|pinta_barras:bloque2|green~16                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~17                                  ; |vga_simple|pinta_barras:bloque2|green~17                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~18                                  ; |vga_simple|pinta_barras:bloque2|green~18                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~19                                  ; |vga_simple|pinta_barras:bloque2|green~19                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~8                                    ; |vga_simple|pinta_barras:bloque2|blue~8                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~9                                    ; |vga_simple|pinta_barras:bloque2|blue~9                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~10                                   ; |vga_simple|pinta_barras:bloque2|blue~10                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~11                                   ; |vga_simple|pinta_barras:bloque2|blue~11                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~12                                   ; |vga_simple|pinta_barras:bloque2|blue~12                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~13                                   ; |vga_simple|pinta_barras:bloque2|blue~13                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~14                                   ; |vga_simple|pinta_barras:bloque2|blue~14                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~15                                   ; |vga_simple|pinta_barras:bloque2|blue~15                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~20                                  ; |vga_simple|pinta_barras:bloque2|green~20                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~21                                  ; |vga_simple|pinta_barras:bloque2|green~21                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~22                                  ; |vga_simple|pinta_barras:bloque2|green~22                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~23                                  ; |vga_simple|pinta_barras:bloque2|green~23                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~24                                  ; |vga_simple|pinta_barras:bloque2|green~24                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~25                                  ; |vga_simple|pinta_barras:bloque2|green~25                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~26                                  ; |vga_simple|pinta_barras:bloque2|green~26                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~27                                  ; |vga_simple|pinta_barras:bloque2|green~27                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~16                                   ; |vga_simple|pinta_barras:bloque2|blue~16                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~17                                   ; |vga_simple|pinta_barras:bloque2|blue~17                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~18                                   ; |vga_simple|pinta_barras:bloque2|blue~18                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~19                                   ; |vga_simple|pinta_barras:bloque2|blue~19                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~20                                   ; |vga_simple|pinta_barras:bloque2|blue~20                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~21                                   ; |vga_simple|pinta_barras:bloque2|blue~21                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~22                                   ; |vga_simple|pinta_barras:bloque2|blue~22                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~23                                   ; |vga_simple|pinta_barras:bloque2|blue~23                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~24                                   ; |vga_simple|pinta_barras:bloque2|blue~24                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~25                                   ; |vga_simple|pinta_barras:bloque2|blue~25                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~10                                    ; |vga_simple|pinta_barras:bloque2|red~10                                    ; out0             ;
+; |vga_simple|pinta_barras:bloque2|red~11                                    ; |vga_simple|pinta_barras:bloque2|red~11                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~12                                    ; |vga_simple|pinta_barras:bloque2|red~12                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~13                                    ; |vga_simple|pinta_barras:bloque2|red~13                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~14                                    ; |vga_simple|pinta_barras:bloque2|red~14                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~15                                    ; |vga_simple|pinta_barras:bloque2|red~15                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~16                                    ; |vga_simple|pinta_barras:bloque2|red~16                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~17                                    ; |vga_simple|pinta_barras:bloque2|red~17                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~18                                    ; |vga_simple|pinta_barras:bloque2|red~18                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~19                                    ; |vga_simple|pinta_barras:bloque2|red~19                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~28                                  ; |vga_simple|pinta_barras:bloque2|green~28                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~29                                  ; |vga_simple|pinta_barras:bloque2|green~29                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~30                                  ; |vga_simple|pinta_barras:bloque2|green~30                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~31                                  ; |vga_simple|pinta_barras:bloque2|green~31                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~32                                  ; |vga_simple|pinta_barras:bloque2|green~32                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~33                                  ; |vga_simple|pinta_barras:bloque2|green~33                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~34                                  ; |vga_simple|pinta_barras:bloque2|green~34                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~35                                  ; |vga_simple|pinta_barras:bloque2|green~35                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~26                                   ; |vga_simple|pinta_barras:bloque2|blue~26                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~27                                   ; |vga_simple|pinta_barras:bloque2|blue~27                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~28                                   ; |vga_simple|pinta_barras:bloque2|blue~28                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~29                                   ; |vga_simple|pinta_barras:bloque2|blue~29                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~30                                   ; |vga_simple|pinta_barras:bloque2|blue~30                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~31                                   ; |vga_simple|pinta_barras:bloque2|blue~31                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~32                                   ; |vga_simple|pinta_barras:bloque2|blue~32                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~33                                   ; |vga_simple|pinta_barras:bloque2|blue~33                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~34                                   ; |vga_simple|pinta_barras:bloque2|blue~34                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~35                                   ; |vga_simple|pinta_barras:bloque2|blue~35                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~20                                    ; |vga_simple|pinta_barras:bloque2|red~20                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~21                                    ; |vga_simple|pinta_barras:bloque2|red~21                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~22                                    ; |vga_simple|pinta_barras:bloque2|red~22                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~23                                    ; |vga_simple|pinta_barras:bloque2|red~23                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~24                                    ; |vga_simple|pinta_barras:bloque2|red~24                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~25                                    ; |vga_simple|pinta_barras:bloque2|red~25                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~26                                    ; |vga_simple|pinta_barras:bloque2|red~26                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~27                                    ; |vga_simple|pinta_barras:bloque2|red~27                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~28                                    ; |vga_simple|pinta_barras:bloque2|red~28                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~29                                    ; |vga_simple|pinta_barras:bloque2|red~29                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~30                                    ; |vga_simple|pinta_barras:bloque2|red~30                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~31                                    ; |vga_simple|pinta_barras:bloque2|red~31                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~32                                    ; |vga_simple|pinta_barras:bloque2|red~32                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~33                                    ; |vga_simple|pinta_barras:bloque2|red~33                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~34                                    ; |vga_simple|pinta_barras:bloque2|red~34                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~35                                    ; |vga_simple|pinta_barras:bloque2|red~35                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~36                                    ; |vga_simple|pinta_barras:bloque2|red~36                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~37                                    ; |vga_simple|pinta_barras:bloque2|red~37                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~38                                    ; |vga_simple|pinta_barras:bloque2|red~38                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~39                                    ; |vga_simple|pinta_barras:bloque2|red~39                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~40                                    ; |vga_simple|pinta_barras:bloque2|red~40                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~41                                    ; |vga_simple|pinta_barras:bloque2|red~41                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~42                                    ; |vga_simple|pinta_barras:bloque2|red~42                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~43                                    ; |vga_simple|pinta_barras:bloque2|red~43                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~44                                    ; |vga_simple|pinta_barras:bloque2|red~44                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~45                                    ; |vga_simple|pinta_barras:bloque2|red~45                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~46                                    ; |vga_simple|pinta_barras:bloque2|red~46                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~47                                    ; |vga_simple|pinta_barras:bloque2|red~47                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~48                                    ; |vga_simple|pinta_barras:bloque2|red~48                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~49                                    ; |vga_simple|pinta_barras:bloque2|red~49                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~50                                    ; |vga_simple|pinta_barras:bloque2|red~50                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~51                                    ; |vga_simple|pinta_barras:bloque2|red~51                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~52                                    ; |vga_simple|pinta_barras:bloque2|red~52                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~53                                    ; |vga_simple|pinta_barras:bloque2|red~53                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~54                                    ; |vga_simple|pinta_barras:bloque2|red~54                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~55                                    ; |vga_simple|pinta_barras:bloque2|red~55                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~56                                    ; |vga_simple|pinta_barras:bloque2|red~56                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red~57                                    ; |vga_simple|pinta_barras:bloque2|red~57                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~36                                  ; |vga_simple|pinta_barras:bloque2|green~36                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~37                                  ; |vga_simple|pinta_barras:bloque2|green~37                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~38                                  ; |vga_simple|pinta_barras:bloque2|green~38                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~39                                  ; |vga_simple|pinta_barras:bloque2|green~39                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~40                                  ; |vga_simple|pinta_barras:bloque2|green~40                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~41                                  ; |vga_simple|pinta_barras:bloque2|green~41                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~42                                  ; |vga_simple|pinta_barras:bloque2|green~42                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~43                                  ; |vga_simple|pinta_barras:bloque2|green~43                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~44                                  ; |vga_simple|pinta_barras:bloque2|green~44                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~45                                  ; |vga_simple|pinta_barras:bloque2|green~45                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~46                                  ; |vga_simple|pinta_barras:bloque2|green~46                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~47                                  ; |vga_simple|pinta_barras:bloque2|green~47                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~48                                  ; |vga_simple|pinta_barras:bloque2|green~48                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~49                                  ; |vga_simple|pinta_barras:bloque2|green~49                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~50                                  ; |vga_simple|pinta_barras:bloque2|green~50                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~51                                  ; |vga_simple|pinta_barras:bloque2|green~51                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~52                                  ; |vga_simple|pinta_barras:bloque2|green~52                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~53                                  ; |vga_simple|pinta_barras:bloque2|green~53                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~54                                  ; |vga_simple|pinta_barras:bloque2|green~54                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~55                                  ; |vga_simple|pinta_barras:bloque2|green~55                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~56                                  ; |vga_simple|pinta_barras:bloque2|green~56                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~57                                  ; |vga_simple|pinta_barras:bloque2|green~57                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~58                                  ; |vga_simple|pinta_barras:bloque2|green~58                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~59                                  ; |vga_simple|pinta_barras:bloque2|green~59                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~60                                  ; |vga_simple|pinta_barras:bloque2|green~60                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~61                                  ; |vga_simple|pinta_barras:bloque2|green~61                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~62                                  ; |vga_simple|pinta_barras:bloque2|green~62                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~63                                  ; |vga_simple|pinta_barras:bloque2|green~63                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~64                                  ; |vga_simple|pinta_barras:bloque2|green~64                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~65                                  ; |vga_simple|pinta_barras:bloque2|green~65                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~66                                  ; |vga_simple|pinta_barras:bloque2|green~66                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~67                                  ; |vga_simple|pinta_barras:bloque2|green~67                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~68                                  ; |vga_simple|pinta_barras:bloque2|green~68                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~69                                  ; |vga_simple|pinta_barras:bloque2|green~69                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~70                                  ; |vga_simple|pinta_barras:bloque2|green~70                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green~71                                  ; |vga_simple|pinta_barras:bloque2|green~71                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~36                                   ; |vga_simple|pinta_barras:bloque2|blue~36                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~37                                   ; |vga_simple|pinta_barras:bloque2|blue~37                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~38                                   ; |vga_simple|pinta_barras:bloque2|blue~38                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~39                                   ; |vga_simple|pinta_barras:bloque2|blue~39                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~40                                   ; |vga_simple|pinta_barras:bloque2|blue~40                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~41                                   ; |vga_simple|pinta_barras:bloque2|blue~41                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~42                                   ; |vga_simple|pinta_barras:bloque2|blue~42                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~43                                   ; |vga_simple|pinta_barras:bloque2|blue~43                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~44                                   ; |vga_simple|pinta_barras:bloque2|blue~44                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~45                                   ; |vga_simple|pinta_barras:bloque2|blue~45                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~46                                   ; |vga_simple|pinta_barras:bloque2|blue~46                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~47                                   ; |vga_simple|pinta_barras:bloque2|blue~47                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~48                                   ; |vga_simple|pinta_barras:bloque2|blue~48                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~49                                   ; |vga_simple|pinta_barras:bloque2|blue~49                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~50                                   ; |vga_simple|pinta_barras:bloque2|blue~50                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~51                                   ; |vga_simple|pinta_barras:bloque2|blue~51                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~52                                   ; |vga_simple|pinta_barras:bloque2|blue~52                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~53                                   ; |vga_simple|pinta_barras:bloque2|blue~53                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~54                                   ; |vga_simple|pinta_barras:bloque2|blue~54                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~55                                   ; |vga_simple|pinta_barras:bloque2|blue~55                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~56                                   ; |vga_simple|pinta_barras:bloque2|blue~56                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~57                                   ; |vga_simple|pinta_barras:bloque2|blue~57                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~58                                   ; |vga_simple|pinta_barras:bloque2|blue~58                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~59                                   ; |vga_simple|pinta_barras:bloque2|blue~59                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~60                                   ; |vga_simple|pinta_barras:bloque2|blue~60                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~61                                   ; |vga_simple|pinta_barras:bloque2|blue~61                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~62                                   ; |vga_simple|pinta_barras:bloque2|blue~62                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~63                                   ; |vga_simple|pinta_barras:bloque2|blue~63                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~64                                   ; |vga_simple|pinta_barras:bloque2|blue~64                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~65                                   ; |vga_simple|pinta_barras:bloque2|blue~65                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~66                                   ; |vga_simple|pinta_barras:bloque2|blue~66                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~67                                   ; |vga_simple|pinta_barras:bloque2|blue~67                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~68                                   ; |vga_simple|pinta_barras:bloque2|blue~68                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~69                                   ; |vga_simple|pinta_barras:bloque2|blue~69                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~70                                   ; |vga_simple|pinta_barras:bloque2|blue~70                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~71                                   ; |vga_simple|pinta_barras:bloque2|blue~71                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~72                                   ; |vga_simple|pinta_barras:bloque2|blue~72                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue~73                                   ; |vga_simple|pinta_barras:bloque2|blue~73                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|red[9]                                    ; |vga_simple|pinta_barras:bloque2|red[9]                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red[8]                                    ; |vga_simple|pinta_barras:bloque2|red[8]                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red[7]                                    ; |vga_simple|pinta_barras:bloque2|red[7]                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red[6]                                    ; |vga_simple|pinta_barras:bloque2|red[6]                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red[5]                                    ; |vga_simple|pinta_barras:bloque2|red[5]                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red[4]                                    ; |vga_simple|pinta_barras:bloque2|red[4]                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red[3]                                    ; |vga_simple|pinta_barras:bloque2|red[3]                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red[2]                                    ; |vga_simple|pinta_barras:bloque2|red[2]                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red[1]                                    ; |vga_simple|pinta_barras:bloque2|red[1]                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|red[0]                                    ; |vga_simple|pinta_barras:bloque2|red[0]                                    ; out              ;
+; |vga_simple|pinta_barras:bloque2|green[9]                                  ; |vga_simple|pinta_barras:bloque2|green[9]                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green[8]                                  ; |vga_simple|pinta_barras:bloque2|green[8]                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green[7]                                  ; |vga_simple|pinta_barras:bloque2|green[7]                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green[6]                                  ; |vga_simple|pinta_barras:bloque2|green[6]                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green[5]                                  ; |vga_simple|pinta_barras:bloque2|green[5]                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green[4]                                  ; |vga_simple|pinta_barras:bloque2|green[4]                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green[3]                                  ; |vga_simple|pinta_barras:bloque2|green[3]                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green[2]                                  ; |vga_simple|pinta_barras:bloque2|green[2]                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green[1]                                  ; |vga_simple|pinta_barras:bloque2|green[1]                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|green[0]                                  ; |vga_simple|pinta_barras:bloque2|green[0]                                  ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue[9]                                   ; |vga_simple|pinta_barras:bloque2|blue[9]                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue[8]                                   ; |vga_simple|pinta_barras:bloque2|blue[8]                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue[7]                                   ; |vga_simple|pinta_barras:bloque2|blue[7]                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue[6]                                   ; |vga_simple|pinta_barras:bloque2|blue[6]                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue[5]                                   ; |vga_simple|pinta_barras:bloque2|blue[5]                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue[4]                                   ; |vga_simple|pinta_barras:bloque2|blue[4]                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue[3]                                   ; |vga_simple|pinta_barras:bloque2|blue[3]                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue[2]                                   ; |vga_simple|pinta_barras:bloque2|blue[2]                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue[1]                                   ; |vga_simple|pinta_barras:bloque2|blue[1]                                   ; out              ;
+; |vga_simple|pinta_barras:bloque2|blue[0]                                   ; |vga_simple|pinta_barras:bloque2|blue[0]                                   ; out              ;
+; |vga_simple|sincro_vga:bloque1|P_cont_pxl~0                                ; |vga_simple|sincro_vga:bloque1|P_cont_pxl~0                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|aux_hsynch~0                                ; |vga_simple|sincro_vga:bloque1|aux_hsynch~0                                ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl~0                                  ; |vga_simple|sincro_vga:bloque1|cont_pxl~0                                  ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl~1                                  ; |vga_simple|sincro_vga:bloque1|cont_pxl~1                                  ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl~2                                  ; |vga_simple|sincro_vga:bloque1|cont_pxl~2                                  ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl~3                                  ; |vga_simple|sincro_vga:bloque1|cont_pxl~3                                  ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl~4                                  ; |vga_simple|sincro_vga:bloque1|cont_pxl~4                                  ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl~5                                  ; |vga_simple|sincro_vga:bloque1|cont_pxl~5                                  ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl~6                                  ; |vga_simple|sincro_vga:bloque1|cont_pxl~6                                  ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl~7                                  ; |vga_simple|sincro_vga:bloque1|cont_pxl~7                                  ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl~8                                  ; |vga_simple|sincro_vga:bloque1|cont_pxl~8                                  ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl~9                                  ; |vga_simple|sincro_vga:bloque1|cont_pxl~9                                  ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl~10                                 ; |vga_simple|sincro_vga:bloque1|cont_pxl~10                                 ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~7                                 ; |vga_simple|sincro_vga:bloque1|cont_line~7                                 ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~8                                 ; |vga_simple|sincro_vga:bloque1|cont_line~8                                 ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~9                                 ; |vga_simple|sincro_vga:bloque1|cont_line~9                                 ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~10                                ; |vga_simple|sincro_vga:bloque1|cont_line~10                                ; out              ;
+; |vga_simple|sincro_vga:bloque1|aux_hsynch                                  ; |vga_simple|sincro_vga:bloque1|aux_hsynch                                  ; regout           ;
+; |vga_simple|sincro_vga:bloque1|visible                                     ; |vga_simple|sincro_vga:bloque1|visible                                     ; out0             ;
+; |vga_simple|sincro_vga:bloque1|cont_line[0]                                ; |vga_simple|sincro_vga:bloque1|cont_line[0]                                ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_line[1]                                ; |vga_simple|sincro_vga:bloque1|cont_line[1]                                ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_line[2]                                ; |vga_simple|sincro_vga:bloque1|cont_line[2]                                ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_line[3]                                ; |vga_simple|sincro_vga:bloque1|cont_line[3]                                ; regout           ;
+; |vga_simple|sincro_vga:bloque1|visible_pxl                                 ; |vga_simple|sincro_vga:bloque1|visible_pxl                                 ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl[0]                                 ; |vga_simple|sincro_vga:bloque1|cont_pxl[0]                                 ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl[1]                                 ; |vga_simple|sincro_vga:bloque1|cont_pxl[1]                                 ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl[2]                                 ; |vga_simple|sincro_vga:bloque1|cont_pxl[2]                                 ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl[3]                                 ; |vga_simple|sincro_vga:bloque1|cont_pxl[3]                                 ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl[4]                                 ; |vga_simple|sincro_vga:bloque1|cont_pxl[4]                                 ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl[5]                                 ; |vga_simple|sincro_vga:bloque1|cont_pxl[5]                                 ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl[6]                                 ; |vga_simple|sincro_vga:bloque1|cont_pxl[6]                                 ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl[7]                                 ; |vga_simple|sincro_vga:bloque1|cont_pxl[7]                                 ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl[8]                                 ; |vga_simple|sincro_vga:bloque1|cont_pxl[8]                                 ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl[9]                                 ; |vga_simple|sincro_vga:bloque1|cont_pxl[9]                                 ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_pxl[10]                                ; |vga_simple|sincro_vga:bloque1|cont_pxl[10]                                ; regout           ;
+; |vga_simple|pinta_barras:bloque2|LessThan4~0                               ; |vga_simple|pinta_barras:bloque2|LessThan4~0                               ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan4~1                               ; |vga_simple|pinta_barras:bloque2|LessThan4~1                               ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan0~0                                 ; |vga_simple|sincro_vga:bloque1|LessThan0~0                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan0~1                                 ; |vga_simple|sincro_vga:bloque1|LessThan0~1                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan0~2                                 ; |vga_simple|sincro_vga:bloque1|LessThan0~2                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan0~3                                 ; |vga_simple|sincro_vga:bloque1|LessThan0~3                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan0~4                                 ; |vga_simple|sincro_vga:bloque1|LessThan0~4                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan0~5                                 ; |vga_simple|sincro_vga:bloque1|LessThan0~5                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan0~6                                 ; |vga_simple|sincro_vga:bloque1|LessThan0~6                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan0~7                                 ; |vga_simple|sincro_vga:bloque1|LessThan0~7                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan0~8                                 ; |vga_simple|sincro_vga:bloque1|LessThan0~8                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan0~9                                 ; |vga_simple|sincro_vga:bloque1|LessThan0~9                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan0~10                                ; |vga_simple|sincro_vga:bloque1|LessThan0~10                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan0~11                                ; |vga_simple|sincro_vga:bloque1|LessThan0~11                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan0~12                                ; |vga_simple|sincro_vga:bloque1|LessThan0~12                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan0~13                                ; |vga_simple|sincro_vga:bloque1|LessThan0~13                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~0                                 ; |vga_simple|sincro_vga:bloque1|LessThan1~0                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~1                                 ; |vga_simple|sincro_vga:bloque1|LessThan1~1                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~2                                 ; |vga_simple|sincro_vga:bloque1|LessThan1~2                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~3                                 ; |vga_simple|sincro_vga:bloque1|LessThan1~3                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~4                                 ; |vga_simple|sincro_vga:bloque1|LessThan1~4                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~5                                 ; |vga_simple|sincro_vga:bloque1|LessThan1~5                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~6                                 ; |vga_simple|sincro_vga:bloque1|LessThan1~6                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~7                                 ; |vga_simple|sincro_vga:bloque1|LessThan1~7                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~8                                 ; |vga_simple|sincro_vga:bloque1|LessThan1~8                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~9                                 ; |vga_simple|sincro_vga:bloque1|LessThan1~9                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~10                                ; |vga_simple|sincro_vga:bloque1|LessThan1~10                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~11                                ; |vga_simple|sincro_vga:bloque1|LessThan1~11                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~12                                ; |vga_simple|sincro_vga:bloque1|LessThan1~12                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~13                                ; |vga_simple|sincro_vga:bloque1|LessThan1~13                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~14                                ; |vga_simple|sincro_vga:bloque1|LessThan1~14                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~15                                ; |vga_simple|sincro_vga:bloque1|LessThan1~15                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~16                                ; |vga_simple|sincro_vga:bloque1|LessThan1~16                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan1~17                                ; |vga_simple|sincro_vga:bloque1|LessThan1~17                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan2~0                                 ; |vga_simple|sincro_vga:bloque1|LessThan2~0                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan2~1                                 ; |vga_simple|sincro_vga:bloque1|LessThan2~1                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan2~2                                 ; |vga_simple|sincro_vga:bloque1|LessThan2~2                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan2~3                                 ; |vga_simple|sincro_vga:bloque1|LessThan2~3                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan2~4                                 ; |vga_simple|sincro_vga:bloque1|LessThan2~4                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan2~5                                 ; |vga_simple|sincro_vga:bloque1|LessThan2~5                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan2~6                                 ; |vga_simple|sincro_vga:bloque1|LessThan2~6                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan2~7                                 ; |vga_simple|sincro_vga:bloque1|LessThan2~7                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan2~8                                 ; |vga_simple|sincro_vga:bloque1|LessThan2~8                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan2~9                                 ; |vga_simple|sincro_vga:bloque1|LessThan2~9                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan2~10                                ; |vga_simple|sincro_vga:bloque1|LessThan2~10                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan2~11                                ; |vga_simple|sincro_vga:bloque1|LessThan2~11                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan2~12                                ; |vga_simple|sincro_vga:bloque1|LessThan2~12                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan2~13                                ; |vga_simple|sincro_vga:bloque1|LessThan2~13                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan3~0                                 ; |vga_simple|sincro_vga:bloque1|LessThan3~0                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan3~1                                 ; |vga_simple|sincro_vga:bloque1|LessThan3~1                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan3~2                                 ; |vga_simple|sincro_vga:bloque1|LessThan3~2                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan3~3                                 ; |vga_simple|sincro_vga:bloque1|LessThan3~3                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan3~4                                 ; |vga_simple|sincro_vga:bloque1|LessThan3~4                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan3~5                                 ; |vga_simple|sincro_vga:bloque1|LessThan3~5                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan3~6                                 ; |vga_simple|sincro_vga:bloque1|LessThan3~6                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan3~7                                 ; |vga_simple|sincro_vga:bloque1|LessThan3~7                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan3~8                                 ; |vga_simple|sincro_vga:bloque1|LessThan3~8                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan3~9                                 ; |vga_simple|sincro_vga:bloque1|LessThan3~9                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan3~10                                ; |vga_simple|sincro_vga:bloque1|LessThan3~10                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan3~11                                ; |vga_simple|sincro_vga:bloque1|LessThan3~11                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan3~12                                ; |vga_simple|sincro_vga:bloque1|LessThan3~12                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan3~13                                ; |vga_simple|sincro_vga:bloque1|LessThan3~13                                ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~0                                 ; |vga_simple|sincro_vga:bloque1|LessThan4~0                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~1                                 ; |vga_simple|sincro_vga:bloque1|LessThan4~1                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~2                                 ; |vga_simple|sincro_vga:bloque1|LessThan4~2                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~3                                 ; |vga_simple|sincro_vga:bloque1|LessThan4~3                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~4                                 ; |vga_simple|sincro_vga:bloque1|LessThan4~4                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~0                                 ; |vga_simple|sincro_vga:bloque1|LessThan5~0                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~1                                 ; |vga_simple|sincro_vga:bloque1|LessThan5~1                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~2                                 ; |vga_simple|sincro_vga:bloque1|LessThan5~2                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~3                                 ; |vga_simple|sincro_vga:bloque1|LessThan5~3                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~4                                 ; |vga_simple|sincro_vga:bloque1|LessThan5~4                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~5                                 ; |vga_simple|sincro_vga:bloque1|LessThan5~5                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~6                                 ; |vga_simple|sincro_vga:bloque1|LessThan5~6                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan7~0                                 ; |vga_simple|sincro_vga:bloque1|LessThan7~0                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan7~1                                 ; |vga_simple|sincro_vga:bloque1|LessThan7~1                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan7~2                                 ; |vga_simple|sincro_vga:bloque1|LessThan7~2                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan7~3                                 ; |vga_simple|sincro_vga:bloque1|LessThan7~3                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan7~4                                 ; |vga_simple|sincro_vga:bloque1|LessThan7~4                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan7~5                                 ; |vga_simple|sincro_vga:bloque1|LessThan7~5                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan7~6                                 ; |vga_simple|sincro_vga:bloque1|LessThan7~6                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan7~7                                 ; |vga_simple|sincro_vga:bloque1|LessThan7~7                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan7~8                                 ; |vga_simple|sincro_vga:bloque1|LessThan7~8                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan7~9                                 ; |vga_simple|sincro_vga:bloque1|LessThan7~9                                 ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~0                                      ; |vga_simple|sincro_vga:bloque1|Add0~0                                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~1                                      ; |vga_simple|sincro_vga:bloque1|Add0~1                                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~2                                      ; |vga_simple|sincro_vga:bloque1|Add0~2                                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~3                                      ; |vga_simple|sincro_vga:bloque1|Add0~3                                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~4                                      ; |vga_simple|sincro_vga:bloque1|Add0~4                                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~5                                      ; |vga_simple|sincro_vga:bloque1|Add0~5                                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~6                                      ; |vga_simple|sincro_vga:bloque1|Add0~6                                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~7                                      ; |vga_simple|sincro_vga:bloque1|Add0~7                                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~8                                      ; |vga_simple|sincro_vga:bloque1|Add0~8                                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~9                                      ; |vga_simple|sincro_vga:bloque1|Add0~9                                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~10                                     ; |vga_simple|sincro_vga:bloque1|Add0~10                                     ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~11                                     ; |vga_simple|sincro_vga:bloque1|Add0~11                                     ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~12                                     ; |vga_simple|sincro_vga:bloque1|Add0~12                                     ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~13                                     ; |vga_simple|sincro_vga:bloque1|Add0~13                                     ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~14                                     ; |vga_simple|sincro_vga:bloque1|Add0~14                                     ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~15                                     ; |vga_simple|sincro_vga:bloque1|Add0~15                                     ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~16                                     ; |vga_simple|sincro_vga:bloque1|Add0~16                                     ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~17                                     ; |vga_simple|sincro_vga:bloque1|Add0~17                                     ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add0~18                                     ; |vga_simple|sincro_vga:bloque1|Add0~18                                     ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~0                                      ; |vga_simple|sincro_vga:bloque1|Add1~0                                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~1                                      ; |vga_simple|sincro_vga:bloque1|Add1~1                                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~2                                      ; |vga_simple|sincro_vga:bloque1|Add1~2                                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~3                                      ; |vga_simple|sincro_vga:bloque1|Add1~3                                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~4                                      ; |vga_simple|sincro_vga:bloque1|Add1~4                                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~5                                      ; |vga_simple|sincro_vga:bloque1|Add1~5                                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|Equal0~0                                  ; |vga_simple|pinta_barras:bloque2|Equal0~0                                  ; out0             ;
+; |vga_simple|pinta_barras:bloque2|Equal1~0                                  ; |vga_simple|pinta_barras:bloque2|Equal1~0                                  ; out0             ;
+; |vga_simple|pinta_barras:bloque2|Equal4~0                                  ; |vga_simple|pinta_barras:bloque2|Equal4~0                                  ; out0             ;
+; |vga_simple|pinta_barras:bloque2|Equal5~0                                  ; |vga_simple|pinta_barras:bloque2|Equal5~0                                  ; out0             ;
+; |vga_simple|pinta_barras:bloque2|Equal6~0                                  ; |vga_simple|pinta_barras:bloque2|Equal6~0                                  ; out0             ;
+; |vga_simple|pinta_barras:bloque2|Equal7~0                                  ; |vga_simple|pinta_barras:bloque2|Equal7~0                                  ; out0             ;
+; |vga_simple|pinta_barras:bloque2|Equal8~0                                  ; |vga_simple|pinta_barras:bloque2|Equal8~0                                  ; out0             ;
+; |vga_simple|pinta_barras:bloque2|Equal9~0                                  ; |vga_simple|pinta_barras:bloque2|Equal9~0                                  ; out0             ;
+; |vga_simple|pinta_barras:bloque2|Equal10~0                                 ; |vga_simple|pinta_barras:bloque2|Equal10~0                                 ; out0             ;
+; |vga_simple|pinta_barras:bloque2|Equal11~0                                 ; |vga_simple|pinta_barras:bloque2|Equal11~0                                 ; out0             ;
+; |vga_simple|pinta_barras:bloque2|Equal12~0                                 ; |vga_simple|pinta_barras:bloque2|Equal12~0                                 ; out0             ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                 ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+; Node Name                                                         ; Output Port Name                                                  ; Output Port Type ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+; |vga_simple|reset                                                 ; |vga_simple|reset                                                 ; out              ;
+; |vga_simple|VGA_VS                                                ; |vga_simple|VGA_VS                                                ; pin_out          ;
+; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|comb~0              ; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|comb~0              ; out0             ;
+; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|prev_reset          ; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|prev_reset          ; regout           ;
+; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|wire_pfdena_reg_ena ; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|wire_pfdena_reg_ena ; out0             ;
+; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|w_reset             ; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|w_reset             ; out0             ;
+; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|w_select_control    ; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|w_select_control    ; out0             ;
+; |vga_simple|pinta_barras:bloque2|P_pinta~3                        ; |vga_simple|pinta_barras:bloque2|P_pinta~3                        ; out0             ;
+; |vga_simple|pinta_barras:bloque2|P_pinta~4                        ; |vga_simple|pinta_barras:bloque2|P_pinta~4                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|aux_vsynch                         ; |vga_simple|sincro_vga:bloque1|aux_vsynch                         ; regout           ;
+; |vga_simple|sincro_vga:bloque1|process_1~0                        ; |vga_simple|sincro_vga:bloque1|process_1~0                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|aux_vsynch~0                       ; |vga_simple|sincro_vga:bloque1|aux_vsynch~0                       ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~0                        ; |vga_simple|sincro_vga:bloque1|cont_line~0                        ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~1                        ; |vga_simple|sincro_vga:bloque1|cont_line~1                        ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~2                        ; |vga_simple|sincro_vga:bloque1|cont_line~2                        ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~3                        ; |vga_simple|sincro_vga:bloque1|cont_line~3                        ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~4                        ; |vga_simple|sincro_vga:bloque1|cont_line~4                        ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~5                        ; |vga_simple|sincro_vga:bloque1|cont_line~5                        ; out              ;
+; |vga_simple|sincro_vga:bloque1|visible_line                       ; |vga_simple|sincro_vga:bloque1|visible_line                       ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_line[5]                       ; |vga_simple|sincro_vga:bloque1|cont_line[5]                       ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_line[6]                       ; |vga_simple|sincro_vga:bloque1|cont_line[6]                       ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_line[7]                       ; |vga_simple|sincro_vga:bloque1|cont_line[7]                       ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_line[8]                       ; |vga_simple|sincro_vga:bloque1|cont_line[8]                       ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_line[9]                       ; |vga_simple|sincro_vga:bloque1|cont_line[9]                       ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_line[10]                      ; |vga_simple|sincro_vga:bloque1|cont_line[10]                      ; regout           ;
+; |vga_simple|pinta_barras:bloque2|LessThan0~0                      ; |vga_simple|pinta_barras:bloque2|LessThan0~0                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan0~1                      ; |vga_simple|pinta_barras:bloque2|LessThan0~1                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan1~0                      ; |vga_simple|pinta_barras:bloque2|LessThan1~0                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan1~1                      ; |vga_simple|pinta_barras:bloque2|LessThan1~1                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan1~2                      ; |vga_simple|pinta_barras:bloque2|LessThan1~2                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan1~3                      ; |vga_simple|pinta_barras:bloque2|LessThan1~3                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan2~0                      ; |vga_simple|pinta_barras:bloque2|LessThan2~0                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan2~1                      ; |vga_simple|pinta_barras:bloque2|LessThan2~1                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan2~2                      ; |vga_simple|pinta_barras:bloque2|LessThan2~2                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan2~3                      ; |vga_simple|pinta_barras:bloque2|LessThan2~3                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan2~4                      ; |vga_simple|pinta_barras:bloque2|LessThan2~4                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan3~0                      ; |vga_simple|pinta_barras:bloque2|LessThan3~0                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan3~1                      ; |vga_simple|pinta_barras:bloque2|LessThan3~1                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan3~2                      ; |vga_simple|pinta_barras:bloque2|LessThan3~2                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~5                        ; |vga_simple|sincro_vga:bloque1|LessThan4~5                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~6                        ; |vga_simple|sincro_vga:bloque1|LessThan4~6                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~7                        ; |vga_simple|sincro_vga:bloque1|LessThan4~7                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~8                        ; |vga_simple|sincro_vga:bloque1|LessThan4~8                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~9                        ; |vga_simple|sincro_vga:bloque1|LessThan4~9                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~10                       ; |vga_simple|sincro_vga:bloque1|LessThan4~10                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~11                       ; |vga_simple|sincro_vga:bloque1|LessThan4~11                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~12                       ; |vga_simple|sincro_vga:bloque1|LessThan4~12                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~8                        ; |vga_simple|sincro_vga:bloque1|LessThan5~8                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~9                        ; |vga_simple|sincro_vga:bloque1|LessThan5~9                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~10                       ; |vga_simple|sincro_vga:bloque1|LessThan5~10                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~11                       ; |vga_simple|sincro_vga:bloque1|LessThan5~11                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~12                       ; |vga_simple|sincro_vga:bloque1|LessThan5~12                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~13                       ; |vga_simple|sincro_vga:bloque1|LessThan5~13                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~14                       ; |vga_simple|sincro_vga:bloque1|LessThan5~14                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~15                       ; |vga_simple|sincro_vga:bloque1|LessThan5~15                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~16                       ; |vga_simple|sincro_vga:bloque1|LessThan5~16                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~17                       ; |vga_simple|sincro_vga:bloque1|LessThan5~17                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~18                       ; |vga_simple|sincro_vga:bloque1|LessThan5~18                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan7~10                       ; |vga_simple|sincro_vga:bloque1|LessThan7~10                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan7~11                       ; |vga_simple|sincro_vga:bloque1|LessThan7~11                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~7                             ; |vga_simple|sincro_vga:bloque1|Add1~7                             ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~8                             ; |vga_simple|sincro_vga:bloque1|Add1~8                             ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~9                             ; |vga_simple|sincro_vga:bloque1|Add1~9                             ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~10                            ; |vga_simple|sincro_vga:bloque1|Add1~10                            ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~11                            ; |vga_simple|sincro_vga:bloque1|Add1~11                            ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~12                            ; |vga_simple|sincro_vga:bloque1|Add1~12                            ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~13                            ; |vga_simple|sincro_vga:bloque1|Add1~13                            ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~14                            ; |vga_simple|sincro_vga:bloque1|Add1~14                            ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~15                            ; |vga_simple|sincro_vga:bloque1|Add1~15                            ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~16                            ; |vga_simple|sincro_vga:bloque1|Add1~16                            ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~17                            ; |vga_simple|sincro_vga:bloque1|Add1~17                            ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~18                            ; |vga_simple|sincro_vga:bloque1|Add1~18                            ; out0             ;
+; |vga_simple|pinta_barras:bloque2|Equal2~0                         ; |vga_simple|pinta_barras:bloque2|Equal2~0                         ; out0             ;
+; |vga_simple|pinta_barras:bloque2|Equal3~0                         ; |vga_simple|pinta_barras:bloque2|Equal3~0                         ; out0             ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                 ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+; Node Name                                                         ; Output Port Name                                                  ; Output Port Type ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+; |vga_simple|reset                                                 ; |vga_simple|reset                                                 ; out              ;
+; |vga_simple|VGA_VS                                                ; |vga_simple|VGA_VS                                                ; pin_out          ;
+; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|comb~0              ; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|comb~0              ; out0             ;
+; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|prev_reset          ; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|prev_reset          ; regout           ;
+; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|wire_pfdena_reg_ena ; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|wire_pfdena_reg_ena ; out0             ;
+; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|w_reset             ; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|w_reset             ; out0             ;
+; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|w_select_control    ; |vga_simple|PLL:blique3|PLL_altpll_0:altpll_0|w_select_control    ; out0             ;
+; |vga_simple|pinta_barras:bloque2|P_pinta~3                        ; |vga_simple|pinta_barras:bloque2|P_pinta~3                        ; out0             ;
+; |vga_simple|pinta_barras:bloque2|P_pinta~4                        ; |vga_simple|pinta_barras:bloque2|P_pinta~4                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|aux_vsynch                         ; |vga_simple|sincro_vga:bloque1|aux_vsynch                         ; regout           ;
+; |vga_simple|sincro_vga:bloque1|process_1~0                        ; |vga_simple|sincro_vga:bloque1|process_1~0                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|aux_vsynch~0                       ; |vga_simple|sincro_vga:bloque1|aux_vsynch~0                       ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~0                        ; |vga_simple|sincro_vga:bloque1|cont_line~0                        ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~1                        ; |vga_simple|sincro_vga:bloque1|cont_line~1                        ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~2                        ; |vga_simple|sincro_vga:bloque1|cont_line~2                        ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~3                        ; |vga_simple|sincro_vga:bloque1|cont_line~3                        ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~4                        ; |vga_simple|sincro_vga:bloque1|cont_line~4                        ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~5                        ; |vga_simple|sincro_vga:bloque1|cont_line~5                        ; out              ;
+; |vga_simple|sincro_vga:bloque1|cont_line~6                        ; |vga_simple|sincro_vga:bloque1|cont_line~6                        ; out              ;
+; |vga_simple|sincro_vga:bloque1|visible_line                       ; |vga_simple|sincro_vga:bloque1|visible_line                       ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_line[4]                       ; |vga_simple|sincro_vga:bloque1|cont_line[4]                       ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_line[5]                       ; |vga_simple|sincro_vga:bloque1|cont_line[5]                       ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_line[6]                       ; |vga_simple|sincro_vga:bloque1|cont_line[6]                       ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_line[7]                       ; |vga_simple|sincro_vga:bloque1|cont_line[7]                       ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_line[8]                       ; |vga_simple|sincro_vga:bloque1|cont_line[8]                       ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_line[9]                       ; |vga_simple|sincro_vga:bloque1|cont_line[9]                       ; regout           ;
+; |vga_simple|sincro_vga:bloque1|cont_line[10]                      ; |vga_simple|sincro_vga:bloque1|cont_line[10]                      ; regout           ;
+; |vga_simple|pinta_barras:bloque2|LessThan0~0                      ; |vga_simple|pinta_barras:bloque2|LessThan0~0                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan0~1                      ; |vga_simple|pinta_barras:bloque2|LessThan0~1                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan1~0                      ; |vga_simple|pinta_barras:bloque2|LessThan1~0                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan1~1                      ; |vga_simple|pinta_barras:bloque2|LessThan1~1                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan1~2                      ; |vga_simple|pinta_barras:bloque2|LessThan1~2                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan1~3                      ; |vga_simple|pinta_barras:bloque2|LessThan1~3                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan2~0                      ; |vga_simple|pinta_barras:bloque2|LessThan2~0                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan2~1                      ; |vga_simple|pinta_barras:bloque2|LessThan2~1                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan2~2                      ; |vga_simple|pinta_barras:bloque2|LessThan2~2                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan2~3                      ; |vga_simple|pinta_barras:bloque2|LessThan2~3                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan2~4                      ; |vga_simple|pinta_barras:bloque2|LessThan2~4                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan3~0                      ; |vga_simple|pinta_barras:bloque2|LessThan3~0                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan3~1                      ; |vga_simple|pinta_barras:bloque2|LessThan3~1                      ; out0             ;
+; |vga_simple|pinta_barras:bloque2|LessThan3~2                      ; |vga_simple|pinta_barras:bloque2|LessThan3~2                      ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~5                        ; |vga_simple|sincro_vga:bloque1|LessThan4~5                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~6                        ; |vga_simple|sincro_vga:bloque1|LessThan4~6                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~7                        ; |vga_simple|sincro_vga:bloque1|LessThan4~7                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~8                        ; |vga_simple|sincro_vga:bloque1|LessThan4~8                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~9                        ; |vga_simple|sincro_vga:bloque1|LessThan4~9                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~10                       ; |vga_simple|sincro_vga:bloque1|LessThan4~10                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~11                       ; |vga_simple|sincro_vga:bloque1|LessThan4~11                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan4~12                       ; |vga_simple|sincro_vga:bloque1|LessThan4~12                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~7                        ; |vga_simple|sincro_vga:bloque1|LessThan5~7                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~8                        ; |vga_simple|sincro_vga:bloque1|LessThan5~8                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~9                        ; |vga_simple|sincro_vga:bloque1|LessThan5~9                        ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~10                       ; |vga_simple|sincro_vga:bloque1|LessThan5~10                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~11                       ; |vga_simple|sincro_vga:bloque1|LessThan5~11                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~12                       ; |vga_simple|sincro_vga:bloque1|LessThan5~12                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~13                       ; |vga_simple|sincro_vga:bloque1|LessThan5~13                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~14                       ; |vga_simple|sincro_vga:bloque1|LessThan5~14                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~15                       ; |vga_simple|sincro_vga:bloque1|LessThan5~15                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~16                       ; |vga_simple|sincro_vga:bloque1|LessThan5~16                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~17                       ; |vga_simple|sincro_vga:bloque1|LessThan5~17                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan5~18                       ; |vga_simple|sincro_vga:bloque1|LessThan5~18                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan7~10                       ; |vga_simple|sincro_vga:bloque1|LessThan7~10                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|LessThan7~11                       ; |vga_simple|sincro_vga:bloque1|LessThan7~11                       ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~6                             ; |vga_simple|sincro_vga:bloque1|Add1~6                             ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~7                             ; |vga_simple|sincro_vga:bloque1|Add1~7                             ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~8                             ; |vga_simple|sincro_vga:bloque1|Add1~8                             ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~9                             ; |vga_simple|sincro_vga:bloque1|Add1~9                             ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~10                            ; |vga_simple|sincro_vga:bloque1|Add1~10                            ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~11                            ; |vga_simple|sincro_vga:bloque1|Add1~11                            ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~12                            ; |vga_simple|sincro_vga:bloque1|Add1~12                            ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~13                            ; |vga_simple|sincro_vga:bloque1|Add1~13                            ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~14                            ; |vga_simple|sincro_vga:bloque1|Add1~14                            ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~15                            ; |vga_simple|sincro_vga:bloque1|Add1~15                            ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~16                            ; |vga_simple|sincro_vga:bloque1|Add1~16                            ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~17                            ; |vga_simple|sincro_vga:bloque1|Add1~17                            ; out0             ;
+; |vga_simple|sincro_vga:bloque1|Add1~18                            ; |vga_simple|sincro_vga:bloque1|Add1~18                            ; out0             ;
+; |vga_simple|pinta_barras:bloque2|Equal3~0                         ; |vga_simple|pinta_barras:bloque2|Equal3~0                         ; out0             ;
++-------------------------------------------------------------------+-------------------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Sep 13 03:33:20 2023
+Info: Command: quartus_sim --simulation_results_format=VWF pinta_barras -c pinta_barras
+Info (324025): Using vector source file "/home/roly/Documents/FPGA/VHDL/Quartus/vga_test1/Waveform.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "line_num[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "line_num[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "pxl_num[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "pxl_num[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "comp_synch" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "hsynch" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "line_num[10]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "line_num[9]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "line_num[8]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "line_num[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "line_num[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "line_num[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "line_num[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "line_num[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "line_num[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "pxl_num[10]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "pxl_num[9]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "pxl_num[8]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "pxl_num[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "pxl_num[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "pxl_num[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "pxl_num[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "pxl_num[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "pxl_num[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "rst" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "visible" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "vsynch" in design.
+Warning (328012): Can't find signal in vector source file for input pin "|vga_simple|reset"
+Info (311000): System task:  Note : CycloneII PLL is enabled
+Info (311000): System task: Time: 0  Instance: blique3|altpll_0|sd1|pll
+Info (311000): System task: Warning : Invalid transition to 'X' detected on CycloneII PLL input clk. This edge will be ignored.
+Info (311000): System task: Time: 0  Instance: blique3|altpll_0|sd1|pll
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (311000): System task:  Note : CycloneII PLL locked to incoming clock
+Info (311000): System task: Time: 38550  Instance: blique3|altpll_0|sd1|pll
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      84.55 %
+Info (328052): Number of transitions in simulation is 4247887
+Info (324045): Vector file pinta_barras.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 32-bit Simulator was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 284 megabytes
+    Info: Processing ended: Wed Sep 13 03:33:40 2023
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:20
+
+

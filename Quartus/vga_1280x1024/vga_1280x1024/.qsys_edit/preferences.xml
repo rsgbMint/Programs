@@ -3,7 +3,7 @@
  <debug showDebugMenu="0" />
  <systemtable>
   <columns>
-   <connections preferredWidth="30" />
+   <connections preferredWidth="47" />
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
@@ -14,7 +14,7 @@
    <frequency preferredWidth="330" />
   </columns>
  </clocktable>
- <library expandedCategories="Project,Library,Library/Merlin Components" />
+ <library expandedCategories="Project,Library,Library/PLL" />
  <window width="1336" height="683" x="15" y="70" />
  <generation synthesis="VHDL" />
  <hdlexample language="VHDL" />

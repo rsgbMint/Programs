@@ -1,0 +1,61 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'sincro_vga:bloque1|aux_hsynch'
+Slack : -1.721
+TNS   : -18.625
+
+Type  : Slow Model Setup 'blique3|altpll_0|sd1|pll|clk[0]'
+Slack : -0.106
+TNS   : -0.106
+
+Type  : Slow Model Hold 'blique3|altpll_0|sd1|pll|clk[0]'
+Slack : -0.123
+TNS   : -0.123
+
+Type  : Slow Model Hold 'sincro_vga:bloque1|aux_hsynch'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'sincro_vga:bloque1|aux_hsynch'
+Slack : -0.500
+TNS   : -13.000
+
+Type  : Slow Model Minimum Pulse Width 'blique3|altpll_0|sd1|pll|clk[0]'
+Slack : 3.629
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'clk'
+Slack : 18.518
+TNS   : 0.000
+
+Type  : Fast Model Setup 'sincro_vga:bloque1|aux_hsynch'
+Slack : -0.222
+TNS   : -2.059
+
+Type  : Fast Model Setup 'blique3|altpll_0|sd1|pll|clk[0]'
+Slack : -0.167
+TNS   : -0.167
+
+Type  : Fast Model Hold 'blique3|altpll_0|sd1|pll|clk[0]'
+Slack : 0.048
+TNS   : 0.000
+
+Type  : Fast Model Hold 'sincro_vga:bloque1|aux_hsynch'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'sincro_vga:bloque1|aux_hsynch'
+Slack : -0.500
+TNS   : -13.000
+
+Type  : Fast Model Minimum Pulse Width 'blique3|altpll_0|sd1|pll|clk[0]'
+Slack : 3.629
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'clk'
+Slack : 18.518
+TNS   : 0.000
+
+------------------------------------------------------------

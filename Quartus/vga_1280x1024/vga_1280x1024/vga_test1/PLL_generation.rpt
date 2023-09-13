@@ -1,0 +1,27 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=/home/roly/Documents/FPGA/VHDL/Quartus/vga_test1/ --output-directory=/home/roly/Documents/FPGA/VHDL/Quartus/vga_test1/PLL/ --report-file=bsf:/home/roly/Documents/FPGA/VHDL/Quartus/vga_test1/PLL.bsf --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C35F672C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=/home/roly/Documents/FPGA/VHDL/Quartus/vga_test1/PLL.qsys
+Progress: Loading vga_test1/PLL.qsys
+Progress: Reading input file
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=/home/roly/Documents/FPGA/VHDL/Quartus/vga_test1/ --output-directory=/home/roly/Documents/FPGA/VHDL/Quartus/vga_test1/PLL/synthesis/ --file-set=QUARTUS_SYNTH --report-file=sopcinfo:/home/roly/Documents/FPGA/VHDL/Quartus/vga_test1/PLL.sopcinfo --report-file=html:/home/roly/Documents/FPGA/VHDL/Quartus/vga_test1/PLL.html --report-file=qip:/home/roly/Documents/FPGA/VHDL/Quartus/vga_test1/PLL/synthesis/PLL.qip --report-file=cmp:/home/roly/Documents/FPGA/VHDL/Quartus/vga_test1/PLL.cmp --report-file=svd --system-info=DEVICE_FAMILY="Cyclone II" --system-info=DEVICE=EP2C35F672C6 --system-info=DEVICE_SPEEDGRADE=6 --component-file=/home/roly/Documents/FPGA/VHDL/Quartus/vga_test1/PLL.qsys --language=VHDL
+Progress: Loading vga_test1/PLL.qsys
+Progress: Reading input file
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: PLL: Generating PLL "PLL" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 0 modules, 0 connections
+Info: No custom instruction connections, skipping transform 
+Info: No Avalon connections, skipping transform 
+Info: merlin_translator_transform: After transform: 0 modules, 0 connections
+Info: PLL: Done PLL" with 1 modules, 1 files, 247 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
