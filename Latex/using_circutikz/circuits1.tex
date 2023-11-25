@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage[siunitx]{circuitikz}
+\usepackage[margin=0pt, paperwidth=20cm, paperheight=11cm]{geometry}
+
+\begin{document}
+\pagestyle{empty}
+\tikzstyle{branch}=[fill,shape=circle,minimum size=3pt,inner sep=0pt]
+\begin{circuitikz} [remember picture, overlay]
+	\ctikzset{logic ports=ieee, logic ports/fill=cyan!70}
+	\draw[step=1cm,gray!30, very thin](current page.south west) grid (current page.north east);
+	\foreach \x in {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19}
+	\draw (\x cm, 1pt) -- (\x cm , -1pt) node[anchor=south]{\x};
+	\foreach \y in {0,-1,-2,-3,-4,-5,-6,-7,-8,-9,-10}
+	\draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east]{\y};
+	\draw
+	(1,-8) to[battery] (1,-4) 
+		to[ammeter, i_=2<\milli\ampere>] (5,-4) 
+		to[C=3<\farad>] (5,-8) -- (4.5,-8) 
+		to[lamp,*-*] (1.5,-8) -- (1,-8)
+	(1.5,-8) -- (1.5,-10)
+		to[voltmeter, l=3<\kilo\volt>, color=red] (4.5,-10) -- (4.5,-8) ;	
+	
+	\draw 
+	(10,-4) node[or port](or1){}
+	(10,-6) node[and port](and1){}
+	(10,-8) node[xnor port](xnor1){}
+	(13,-10) node[nor port, fill=green!70](nor1){}
+	(13,-5) node[xor port](xor1){}
+	(13,-7) node[nand port, fill=yellow!70](nand1){};
+	\draw
+	(or1.out) -| (xor1.in 1)
+	(xor1.in 2) -| (nand1.in 1)
+	(and1.out) -| node[circ]{} (nand1.in 1)
+	(xnor1.out) -| (nand1.in 2);
+\end{circuitikz}
+\end{document}

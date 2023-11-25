@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}
+	% \draw (0,0) -- (4,0) -- (4,4) -- (0,4) -- cycle;
+	% \draw (0,0) rectangle (4,4);
+	% \draw (6,0) parabola (10,4);
+	% \draw (0,0) .. controls (0,4) and (4,0) .. (4,4);
+	\draw (0,0) circle (3cm);
+	\draw (0,-5) ellipse (3cm and 1cm);
+	\draw (3,-10) arc (0:180:3cm);
+	\draw[red, thick, dashed] (0,-14) circle (2cm);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,42 @@
+\documentclass{standalone}
+\usepackage{siunitx}
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz}
+	\input{grid.tex}
+	\ctikzset{multipoles/thickness=2}
+	\ctikzset{multipoles/external pins thickness=1}
+	\tikzset{mux 2by1/.style={muxdemux,
+			muxdemux def={NL=2, NB=0, 
+			Lh=1, Rh=0.5, w=1, square pins=1}}}
+
+	\draw (5,5) node[dipchip,
+					num pins=6,
+					hide numbers,
+					external pins width=0.3,
+					external pad fraction=4 ](C){};
+	\draw[line width=0.4]
+		(5,5.15) node[mux 2by1](B){\tiny MUX};
+
+	\draw
+		(C.bpin 1) -| (B.lpin 1) 
+		(C.bpin 2) --(B.lpin 2)
+		(B.rpin 1) |- (C.bpin 5);
+
+		\draw[scale=0.5] (C.pin 3) -|++(-1,-0.3) 
+		to[R] ++ (0,-3) node[ground]{};
+	\draw (C.pin 6) -|++(0.5,0.5) node[vcc]{+5V};
+	% --------------------------------------------------------
+	\foreach \pinright in {1,2,3}
+	{
+		\draw node[right,font=\tiny] at(C.pin \pinright) 
+		{$\pinright$};
+	}
+	\foreach \pinleft in {4,5,6}
+	{
+		\draw node[left,font=\tiny] at (C.pin \pinleft) 
+		{$\pinleft$};
+	}
+	\node[font=\tiny] at (5,4.3){\text{\si{\raiseto{2}{R}}}};
+\end{circuitikz}
+\end{document}

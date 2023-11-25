@@ -1,0 +1,45 @@
+\documentclass{standalone}
+\usepackage{siunitx}
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz}
+	\input{grid.tex}
+	\ctikzset{multipoles/thickness=4}
+	\ctikzset{multipoles/external pins thickness=2}
+	\draw (5,5) node[dipchip,
+					num pins=14,
+					hide numbers,
+					external pins width=0.3,
+					external pad fraction=4 ](C){};
+	\draw (4.7,6) node[and port,rotate=-90,](and1){};
+	\draw (4.7,4.4) node[and port,rotate=-90,](and2){};
+	\draw (5.3,3.8) node[and port,rotate=-90,](and3){3};
+	\draw (5.3,5.5) node[and port,rotate=-90,](and4){};
+
+	\draw (C.bpin 1) -| (and1.in 1);
+	\draw (C.bpin 2) -- ([xshift=0.2cm]C.bpin 2) |- (and1.in 2);
+	\draw (C.bpin 3) -| (and1.out);
+
+	\draw (C.bpin 4) -| (and2.in 1);
+	\draw (C.bpin 5) -- ([xshift=0.2cm]C.bpin 5) |- (and2.in 2);
+	\draw (C.bpin 6) -| (and2.out);
+
+	\draw (C.bpin 10) -| (and3.in 2);
+	\draw (C.bpin 9) -- ([xshift=-0.2cm]C.bpin 9) |- (and3.in 1);
+	\draw (C.bpin 8) -| (and3.out);
+
+	\draw (C.bpin 13) -| (and4.in 2);
+	\draw (C.bpin 12) -- ([xshift=-0.2cm]C.bpin 12) |- (and4.in 1);
+	\draw (C.bpin 11) -| (and4.out);
+
+	\foreach \pinright in {1,...,7}
+	{
+		\draw node[right,font=\tiny] at(C.pin \pinright) {$\pinright$};
+	}
+	\foreach \pinleft in {8,...,14}
+	{
+		\draw node[left,font=\tiny] at (C.pin \pinleft) {$\pinleft$};
+	}
+	\node[font=\tiny] at (5,5){\text{\si{\raiseto{2}{R}}}};
+\end{circuitikz}
+\end{document}

@@ -1,0 +1,26 @@
+\documentclass[border=10pt]{standalone}
+\usepackage[siunitx]{circuitikz}
+\begin{document}
+\begin{circuitikz}[american, scale=1]
+	% \input{grid.tex}
+
+	% \draw (2,3) to[sV, v<=2<\kHz>] ++ (0,5);
+	% \draw (4,3) to[R, l=2<\kilo\ohm>] ++ (0,5);
+	% \draw (6,3) to[voltmeter, l=2<\volt>] ++ (0,5);
+	% \draw (5,5) node[npn, tr circle, fill=cyan!30](Q1){} ;
+
+	\draw (5,5) node[op amp](A1){\texttt{QA1}};
+	\draw (A1.-) --++ (0,1) coordinate(tmp) to[R, l_=$R$](tmp -| A1.out) -- (A1.out);
+	\draw (tmp) --++(0,1) coordinate(tmp) to[C=$C$] (tmp -| A1.out) -- (A1.out);
+	\draw (A1.+) to [battery2, invert] ++(0,-2.5) node[ground](GND){};
+	\draw (A1.-) to [L=$L$] ++(-2,0) coordinate(tmp) to[sV, l=$v_s$] (tmp |-GND) node[ground]{};
+	\draw (A1.out) to[R=$R_s$] ++(2,0) coordinate(bb) to[I, l_=$I_B$, invert] ++(0,2) node[vcc](VCC){};
+	\draw (bb) to[D, l=$D$, *-] ++(0,-2) coordinate(bb1) to[R=$R_m$] ++(0,-2) node[vee](VEE){};
+	\draw (bb) --++(1,0) node[npn, anchor=B](Q1){Q1};
+	\draw (bb1) --++(1,0) node[pnp, anchor=B](Q2){Q2};
+	\draw (Q1.E) -- (Q2.E) ($(Q1.E)!0.5!(Q2.E)$) to [short, *-o, name=S] ++(2.5,0) node[right]{$v_{o_Q}$};
+	\draw (S.s) to[european resistor, l=$Z_L$, *-] (S.s|-GND) node[ground]{};
+	\draw (Q1.C) -- (Q1.C|-VCC) node[vcc]{\SI{5}{V}};
+	\draw (Q2.C) -- (Q2.C|-VEE) node[vee]{\SI{-5}{V}};
+\end{circuitikz}
+\end{document}

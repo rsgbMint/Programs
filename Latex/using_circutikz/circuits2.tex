@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[siunitx]{circuitikz}
+\usepackage[margin=0pt, paperwidth=18cm, paperheight=11cm]{geometry}
+\newcommand{\port}{-1.9cm}
+\begin{document}
+\pagestyle{empty}
+\tikzstyle{branch}=[fill,shape=circle,minimum size=3pt,inner sep=0pt]
+\begin{circuitikz} [remember picture, overlay]
+	% \ctikzset{logic ports=ieee, logic ports/fill=cyan!70}
+	\ctikzset{logic ports=ieee, logic ports/fill=yellow!70}
+	\draw[step=1cm,gray!30, very thin](current page.south west) grid (current page.north east);
+	\foreach \x in {-2,...,19}
+	\draw (\x cm, 1pt) -- (\x cm , -1pt) node[anchor=south]{\x};
+	\foreach \y in {-10,...,3}
+	{
+	\draw 
+		(1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,font=\tiny ]{\y};
+	}
+
+	% gates
+	\draw
+	(3,-1) node[and port](and1){}
+	(3,-3) node[or port](or1){}
+	(5.5,-2) node[xor port](xor1){}
+	(1,-3.28) node[scale=0.5, not port](not1){}
+	;
+
+	% signals
+	\draw
+	(and1.out) |- (xor1.in 1)
+	(or1.out) |- (xor1.in 2);
+	
+	% ports
+	\draw
+	([xshift=\port]and1.in 1) node[left]{$A$}to[short,*-] (and1.in 1) 
+	([xshift=\port]and1.in 2) node[left]{$B$}to[short,*-] (and1.in 2) 
+	([xshift=\port]or1.in 1) node[left]{$C$}to[short,*-] (or1.in 1) 
+	([xshift=\port]or1.in 2) node[left]{$D$}
+	to[short,*-] (not1.in 1) 
+	(not1.out) -- (or1.in 2)
+	(xor1.out) node[right]{$F$}
+	;
+\end{circuitikz}
+\end{document}

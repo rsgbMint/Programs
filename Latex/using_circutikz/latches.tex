@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage{circuitikz}
+\usepackage{tikz}
+% \usetikzlibrary{positioning}
+\usepackage{geometry}
+\geometry{top=2cm,
+bottom=1.5cm,
+right=1.5cm,
+headsep=10pt
+}
+
+\tikzset{latch SR/.style={flipflop,
+flipflop def={t1=S, t3=R, t6=Q, t4=\ctikztextnot{Q}}, fill=blue!30}}
+
+\tikzset{latch SR/.style={flipflop,	
+	flipflop def={t1=S, c2=1, t6=Q, 
+	t4={\ctikztextnot{Q}}, t3=R},
+	fill=yellow!50}
+}
+\begin{document}
+    \begin{tikzpicture}
+        \node[flipflop SR](latch1) at (0,0) {};
+        \node[latch SR](latch2) at (4,0) {};
+    \end{tikzpicture}
+\end{document}
